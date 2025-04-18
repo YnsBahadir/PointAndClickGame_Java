@@ -6,6 +6,7 @@ import java.awt.event.MouseEvent;
 import java.awt.event.MouseListener;
 
 import javax.swing.ImageIcon;
+import javax.swing.JButton;
 import javax.swing.JFrame;
 import javax.swing.JLabel;
 import javax.swing.JMenuItem;
@@ -32,7 +33,7 @@ public class UI {
 		this.gm = gm;
 		
 		createMainField();
-		generateScreen();
+		generateScene();
 		
 		window.setVisible(true);
 		
@@ -99,6 +100,9 @@ public class UI {
 		JLabel objectLabel = new JLabel();
 		objectLabel.setBounds(objx, objy, objWidth, objHeight);
 		
+		//Png Arka Plan görme Kodu
+		objectLabel.setOpaque(true);
+		objectLabel.setBackground(Color.blue);
 		
 		ImageIcon objectIcon = new ImageIcon(getClass().getClassLoader().getResource(objFileName));
 		objectLabel.setIcon(objectIcon);
@@ -121,15 +125,44 @@ public class UI {
 		
 		
 		bgPanel[bgNum].add(objectLabel);
-		bgPanel[bgNum].add(bgLabel[bgNum]);
+		
 		
 	}
-	public void generateScreen() {
-		//Screen 1
+	
+	public void createArrowButton(int bgNum, int x, int y, int width, int height, String arrowFileName, String command) {
+			ImageIcon arrowIcon = new ImageIcon(getClass().getClassLoader().getResource(arrowFileName));
+			
+			JButton arrowButton = new JButton();
+			arrowButton.setBounds(x, y, width, height);
+			arrowButton.setBackground(null);
+			arrowButton.setContentAreaFilled(false);
+			arrowButton.setFocusPainted(false);
+			arrowButton.setIcon(arrowIcon);
+			arrowButton.addActionListener(gm.aHandler);
+			arrowButton.setActionCommand(command);
+			arrowButton.setBorderPainted(false);
+			
+			bgPanel[bgNum].add(arrowButton);
+	}
+	
+	public void generateScene() {
+		
+		//Scene 1
 		createBackground(1, "PanelTwo700.jpg");
 		createObject(1, 450,50,200,200, "woodenshedP.png", "Look", "Talk", "Rest", "lookHut", "talkHut", "restHut");
-		createObject(1, 48,55,200,300, "knight2x3.png", "Look", "Talk", "Attack", "lookKnight", "talkKnight", "attackKnight");
+		createObject(1, 90,55,120,300, "knight120x300.png", "Look", "Talk", "Attack", "lookKnight", "talkKnight", "attackKnight");
 		createObject(1, 300,270,76,60, "chest76x60.png", "Look", "Talk", "Open", "lookChest", "talkChest", "openChest");
+		createArrowButton(1, 0, 150, 50, 50, "leftArrow60x50HandMade.png", "goScene2");
+		
+		bgPanel[1].add(bgLabel[1]);
+		
+		//Scene 2 
+		createBackground(2, "caveEnter700x350.jpg");
+		createObject(2, 170,50,170,230, "blank100x100.png", "Look", "Talk", "Enter", "lookCave", "talkCave", "enterCave");
+		createObject(2, 450,130,90,120, "blank100x100.png", "Look", "Talk", "Search", "lookMiniCave", "talkMiniCave", "searchMiniCave");
+		createArrowButton(2, 650, 150, 50, 50, "rightArrow60x50HandMade.png", "goScene1");
+		
+		bgPanel[2].add(bgLabel[2]);
 	}
 }
 

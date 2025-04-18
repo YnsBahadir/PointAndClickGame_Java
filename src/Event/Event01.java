@@ -37,7 +37,7 @@ public class Event01 {
 	/*Sandık mesajları*/
 	
 	public void lookChest() {
-		gm.ui.messageText.setText("This chest look like a come from another dimension.");
+		gm.ui.messageText.setText("This chest look like from another dimension.");
 	}
 	public void talkChest() {
 		gm.ui.messageText.setText("*Some Chest Sounds...*");
