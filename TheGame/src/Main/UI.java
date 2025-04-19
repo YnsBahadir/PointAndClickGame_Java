@@ -3,7 +3,6 @@ package Main;
 import java.awt.Color;
 import java.awt.Font;
 import java.awt.GridLayout;
-import java.awt.Image;
 import java.awt.event.MouseEvent;
 import java.awt.event.MouseListener;
 
@@ -113,7 +112,7 @@ public class UI {
 		
 		//Png Arka Plan görme Kodu
 		objectLabel.setOpaque(true);
-		objectLabel.setBackground(Color.blue);
+		objectLabel.setBackground(Color.green);
 		
 		ImageIcon objectIcon = new ImageIcon(getClass().getClassLoader().getResource(objFileName));
 		objectLabel.setIcon(objectIcon);
@@ -168,10 +167,10 @@ public class UI {
 		
 		/*Bu kısımda olması gerekenden büyük en-boy oranında bir resmi kod ile Scale ederek istediğim boyuta getiriyorum.
 		Ama kullanılması tavsiye edilmiyor genel olarak gördüğüm kadarıyla. 
-		Resim kalitesinin farkını kendi gözlerimle görüp 35x35 bir şekilde koymaya karar verdim. Aşağıdaki kod deneyim olması amacıyla yorum olarak bırakılmıştır. */
+		Resim kalitesinin farkını kendi gözlerimle görüp 35x35 bir şekilde koymaya karar verdim. Aşağıdaki kod deneyim olması amacıyla yorum olarak bırakılmıştır. 
 	
-	//	Image image = lifeIcon.getImage().getScaledInstance(35, 35, Image.SCALE_DEFAULT);
-	//	lifeIcon = new ImageIcon(image);
+		Image image = lifeIcon.getImage().getScaledInstance(35, 35, Image.SCALE_DEFAULT);
+		lifeIcon = new ImageIcon(image);*/
 		
 		int i=1;
 		while(i<6) {
@@ -181,14 +180,33 @@ public class UI {
 			i++;
 		}
 		
+		inventoryPanel = new JPanel();
+		inventoryPanel.setBounds(650, 0, 100, 50);
+		inventoryPanel.setBackground(Color.black);
+		inventoryPanel.setLayout(new GridLayout(1,3));
+		window.add(inventoryPanel);
 		
+		//Create Items 
+		swordLabel = new JLabel();
+		ImageIcon swordIcon = new ImageIcon(getClass().getClassLoader().getResource("rBlade35x35.png"));
+		swordLabel.setIcon(swordIcon);
+		inventoryPanel.add(swordLabel); 
 		
+		shieldLabel = new JLabel();
+		ImageIcon shieldIcon = new ImageIcon(getClass().getClassLoader().getResource("rShield35x35.png"));
+		shieldLabel.setIcon(shieldIcon);
+		inventoryPanel.add(shieldLabel);
+		
+		lanternLabel = new JLabel();
+		ImageIcon lanternIcon = new ImageIcon(getClass().getClassLoader().getResource("lFlame35x35.png"));
+		lanternLabel.setIcon(lanternIcon);
+		inventoryPanel.add(lanternLabel);
 	}
 	
 	public void generateScene() {
 		
 		//Scene 1
-		createBackground(1, "PanelTwo700.jpg");
+		createBackground(1, "PanelOne700.jpg");
 		createObject(1, 450,50,200,200, "woodenshedP.png", "Look", "Talk", "Rest", "lookHut", "talkHut", "restHut");
 		createObject(1, 90,55,120,300, "knight120x300.png", "Look", "Talk", "Attack", "lookKnight", "talkKnight", "attackKnight");
 		createObject(1, 300,270,76,60, "chest76x60.png", "Look", "Talk", "Open", "lookChest", "talkChest", "openChest");
