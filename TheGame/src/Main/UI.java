@@ -2,6 +2,8 @@ package Main;
 
 import java.awt.Color;
 import java.awt.Font;
+import java.awt.GridLayout;
+import java.awt.Image;
 import java.awt.event.MouseEvent;
 import java.awt.event.MouseListener;
 
@@ -26,6 +28,14 @@ public class UI {
 	public JPanel bgPanel[] = new JPanel[10];
 	public JLabel bgLabel[] = new JLabel[10];
 	
+	//Player UI
+	
+	JPanel lifePanel;
+	JLabel lifeLabel[] = new JLabel[6];
+	JPanel inventoryPanel;
+	public JLabel swordLabel, shieldLabel, lanternLabel;
+	
+	
 	
 	
 	public UI(GameManager gm) {
@@ -33,6 +43,7 @@ public class UI {
 		this.gm = gm;
 		
 		createMainField();
+		createPlayerField();
 		generateScene();
 		
 		window.setVisible(true);
@@ -143,6 +154,35 @@ public class UI {
 			arrowButton.setBorderPainted(false);
 			
 			bgPanel[bgNum].add(arrowButton);
+	}
+	
+	public void createPlayerField() {
+		
+		lifePanel = new JPanel();
+		lifePanel.setBounds(50, 0, 250, 50);
+		lifePanel.setBackground(Color.black);
+		lifePanel.setLayout(new GridLayout(1,5));
+		window.add(lifePanel);
+		
+		ImageIcon lifeIcon = new ImageIcon(getClass().getClassLoader().getResource("cHeart35x35.png"));
+		
+		/*Bu kısımda olması gerekenden büyük en-boy oranında bir resmi kod ile Scale ederek istediğim boyuta getiriyorum.
+		Ama kullanılması tavsiye edilmiyor genel olarak gördüğüm kadarıyla. 
+		Resim kalitesinin farkını kendi gözlerimle görüp 35x35 bir şekilde koymaya karar verdim. Aşağıdaki kod deneyim olması amacıyla yorum olarak bırakılmıştır. */
+	
+	//	Image image = lifeIcon.getImage().getScaledInstance(35, 35, Image.SCALE_DEFAULT);
+	//	lifeIcon = new ImageIcon(image);
+		
+		int i=1;
+		while(i<6) {
+			lifeLabel[i] = new JLabel();
+			lifeLabel[i].setIcon(lifeIcon);
+			lifePanel.add(lifeLabel[i]);
+			i++;
+		}
+		
+		
+		
 	}
 	
 	public void generateScene() {
