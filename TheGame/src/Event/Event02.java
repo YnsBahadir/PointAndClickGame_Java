@@ -18,7 +18,12 @@ public class Event02 {
 		gm.ui.messageText.setText("You hear the echo of your voice.");
 	}
 	public void enterCave() {
-		gm.ui.messageText.setText("It's too dark to enter.");
+		if(gm.player.hasLantern==0) {
+			gm.ui.messageText.setText("It's too dark to enter.");
+		}
+		else {
+			gm.sChanger.showScreen3();
+		}
 	}
 	
 	
@@ -29,7 +34,14 @@ public class Event02 {
 		gm.ui.messageText.setText("How are you, little hole?\n(Of course there is no response.");
 	}
 	public void searchMiniCave() {
-		gm.ui.messageText.setText("You found some old Lantern.*");
+		if(gm.player.hasLantern==0) {
+			gm.ui.messageText.setText("You found old Lantern.*");
+			gm.player.hasLantern = 1;
+			gm.player.updatePlayerStatus();
+		}
+		else if (gm.player.hasLantern==1) {
+			gm.ui.messageText.setText("There is nothing else inside.");
+		}
 	}
 
 }

@@ -35,6 +35,9 @@ public class UI {
 	public JLabel swordLabel, shieldLabel, lanternLabel;
 	
 	
+//	GAME OVER UI
+	public JLabel titleLabel;
+	public JButton restartButton;
 	
 	
 	public UI(GameManager gm) {
@@ -43,6 +46,7 @@ public class UI {
 		
 		createMainField();
 		createPlayerField();
+		createGameOverField();
 		generateScene();
 		
 		window.setVisible(true);
@@ -73,6 +77,7 @@ public class UI {
 		bgPanel[bgNum].setBounds(50,50,700,350);
 		bgPanel[bgNum].setBackground(Color.green);
 		bgPanel[bgNum].setLayout(null);
+		bgPanel[bgNum].setVisible(false);
 		window.add(bgPanel[bgNum]);
 		
 		bgLabel[bgNum] = new JLabel();
@@ -203,6 +208,27 @@ public class UI {
 		inventoryPanel.add(lanternLabel);
 	}
 	
+	public void createGameOverField() {
+		
+		titleLabel = new JLabel("", JLabel.CENTER);
+		titleLabel.setBounds(200, 150, 400, 200);
+		titleLabel.setForeground(Color.red);
+		titleLabel.setFont(new Font("Times New Roman", Font.PLAIN, 70));
+		titleLabel.setVisible(false);
+		window.add(titleLabel);
+		
+		restartButton = new JButton();
+		restartButton.setBounds(340, 320, 120, 50);
+		restartButton.setBorder(null);
+		restartButton.setBackground(null);
+		restartButton.setForeground(Color.white);
+		restartButton.setFocusPainted(false);
+		restartButton.addActionListener(gm.aHandler);
+		restartButton.setActionCommand("restart");
+		restartButton.setVisible(false);
+		window.add(restartButton);
+	}
+	
 	public void generateScene() {
 		
 		//Scene 1
@@ -211,7 +237,6 @@ public class UI {
 		createObject(1, 90,55,120,300, "knight120x300.png", "Look", "Talk", "Attack", "lookKnight", "talkKnight", "attackKnight");
 		createObject(1, 300,270,76,60, "chest76x60.png", "Look", "Talk", "Open", "lookChest", "talkChest", "openChest");
 		createArrowButton(1, 0, 150, 50, 50, "leftArrow60x50HandMade.png", "goScene2");
-		
 		bgPanel[1].add(bgLabel[1]);
 		
 		//Scene 2 
@@ -219,7 +244,18 @@ public class UI {
 		createObject(2, 170,50,170,230, "blank100x100.png", "Look", "Talk", "Enter", "lookCave", "talkCave", "enterCave");
 		createObject(2, 450,130,90,120, "blank100x100.png", "Look", "Talk", "Search", "lookMiniCave", "talkMiniCave", "searchMiniCave");
 		createArrowButton(2, 650, 150, 50, 50, "rightArrow60x50HandMade.png", "goScene1");
-		
 		bgPanel[2].add(bgLabel[2]);
+		
+		//Scene 3 
+		createBackground(3, "Cave700x350.jpg");
+		createArrowButton(3, 650, 150, 50, 50, "rightArrow60x50HandMade.png", "goScene2");
+		bgPanel[3].add(bgLabel[3]);
 	}
 }
+
+
+
+
+
+
+

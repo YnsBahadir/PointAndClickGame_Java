@@ -63,11 +63,12 @@ public class Event01 {
 				else if(gm.player.playerLife==1) {
 					gm.ui.messageText.setText("Guard: What a fool one...");
 					gm.player.playerLife--;
+					gm.sChanger.showGameOverScreen(1);
 				}
 			}
 			else if(gm.player.hasSword==1) {
 				gm.ui.messageText.setText("Guard: What the ..!?(Sounds of stabbing in the back.)\nYou earned the knight's shield in an questionable duel.");
-				gm.player.hasShield=1;
+				gm.player.hasShield = 1;
 			}
 			gm.player.updatePlayerStatus();
 		}
