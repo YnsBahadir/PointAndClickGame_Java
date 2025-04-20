@@ -10,20 +10,17 @@ public class Player {
 	public int playerMaxLife;
 	public int playerLife;
 	
-	
 	public int hasSword;
 	public int hasShield;
 	public int hasLantern;
 	
 	public Player(GameManager gm) {
-		
 		this.gm = gm;
-	
 	}
 	
 	public void setPlayerDefaultStatus() {
 		
-		//Bu kısım ne zaman karakterin statlarını sıfırlamak istersem kullanmam için.
+//		Bu kısım ne zaman karakterin statlarını sıfırlamak istersem kullanmam için.
 		playerMaxLife = 5;
 		playerLife = 3;
 		hasSword = 0;
@@ -38,7 +35,7 @@ public class Player {
 	
 	public void updatePlayerStatus() {
 		
-		//Tüm Can Icon'larını kaldır
+//		ENG/Remove all life Icons - TR/Tüm Can Icon'larını kaldır
 		int i = 1;
 		while(i<6) {
 			gm.ui.lifeLabel[i].setVisible(false);
@@ -51,7 +48,7 @@ public class Player {
 			lifeCount--;
 		}
 		
-		//Oyuncunun itemlerini kontrol et
+//		ENG/Check Player items - TR/Oyuncunun itemlerini kontrol et
 		if(hasSword==0) {
 			gm.ui.swordLabel.setVisible(false);
 		}
@@ -59,12 +56,14 @@ public class Player {
 			gm.ui.swordLabel.setVisible(true);
 		}
 		
+		
 		if(hasShield==0) {
 			gm.ui.shieldLabel.setVisible(false);
 		}
 		if(hasShield==1) {
 			gm.ui.shieldLabel.setVisible(true);
 		}
+		
 		
 		if(hasLantern==0) {
 			gm.ui.lanternLabel.setVisible(false);

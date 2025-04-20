@@ -23,12 +23,12 @@ public class UI {
 	
 	JFrame window;
 	public JTextArea messageText;
-	/*Alt kısımda array kullanıyorum çünkü backgrounları tek tek eklemekten daha işlevsel :/ */
+//	ENG/Using array more functional more than added background one by one - TR/Alt kısımda array kullanıyorum çünkü backgrounları tek tek eklemekten daha işlevsel
 	public JPanel bgPanel[] = new JPanel[10];
 	public JLabel bgLabel[] = new JLabel[10];
 	
-	//Player UI
-	
+
+//	Player UI	
 	JPanel lifePanel;
 	JLabel lifeLabel[] = new JLabel[6];
 	JPanel inventoryPanel;
@@ -89,7 +89,7 @@ public class UI {
 		
 		JPopupMenu popMenu = new JPopupMenu();
 		
-		JMenuItem menuItem[] = new JMenuItem[4]; //[1],[2],[3] kullanılacak 0 arada sorun çıkarıyor
+		JMenuItem menuItem[] = new JMenuItem[4]; //[1],[2],[3] kullanılacak 0 arada sorun çıkarabiliyormuş.
 		menuItem[1] = new JMenuItem(choice1Name);
 		menuItem[1].addActionListener(gm.aHandler);
 		menuItem[1].setActionCommand(Choice1Command);
@@ -223,13 +223,3 @@ public class UI {
 		bgPanel[2].add(bgLabel[2]);
 	}
 }
-
-
-
-
-
-
-
-
-
-

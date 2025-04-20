@@ -20,6 +20,7 @@ public class ActionHandler implements ActionListener {
 		String yourChoice = e.getActionCommand();
 		
 		switch(yourChoice){
+//			ENG/Scene 1 Intreactions - TR/Sahne 1 etkileşimleri
 			case "lookHut": gm.ev1.lookHut(); break;
 			case "talkHut": gm.ev1.talkHut(); break;
 			case "restHut": gm.ev1.restHut(); break;
@@ -32,7 +33,16 @@ public class ActionHandler implements ActionListener {
 			case "talkChest": gm.ev1.talkChest(); break;
 			case "openChest": gm.ev1.openChest(); break;
 			
-			//Sahne Değiştirme - Change Scene
+//			Eng/Scene 2 Intreactions - TR/Sahne 2 etkileşimleri 
+			case "lookCave": gm.ev2.lookCave(); break;
+			case "talkCave": gm.ev2.talkCave(); break;
+			case "enterCave": gm.ev2.enterCave(); break;
+			
+			case "lookMiniCave": gm.ev2.lookMiniCave(); break;
+			case "talkMiniCave": gm.ev2.talkMiniCave(); break;
+			case "searchMiniCave": gm.ev2.searchMiniCave(); break;
+			
+//			ENG/Change Scene - TR/Sahne Değiştirme
 			case "goScene1": gm.sChanger.showScreen1(); break;
 			case "goScene2": gm.sChanger.showScreen2(); break;
 		}

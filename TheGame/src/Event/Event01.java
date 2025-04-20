@@ -9,9 +9,9 @@ public class Event01 {
 	public Event01(GameManager gm) {
 		
 		this.gm = gm;
-		
 	}
 	
+//	ENG/Hut Interactions - TR/Kulübe Etkileşimleri
 	public void lookHut() {
 		gm.ui.messageText.setText("This Hut should be Local Tavern. If I have enough coin, I can rest here.");
 	}
@@ -24,8 +24,7 @@ public class Event01 {
 			gm.ui.messageText.setText("You realize you have enough gold to rest in this Tavern.\n(Your life has recovered.)");
 			gm.player.playerLife++;
 			gm.player.lifeCounter++;
-			gm.player.updatePlayerStatus();
-			
+			gm.player.updatePlayerStatus();	
 		}
 		else if((gm.player.lifeCounter!=0)&&(gm.player.playerLife != gm.player.playerMaxLife)) {
 			gm.ui.messageText.setText("You rest at the Tavern. \n(Your life has recovered.)");
@@ -47,8 +46,7 @@ public class Event01 {
 		}
 	}
 	
-	/*Knight mesajları*/
-
+//	ENG/Knight Interactions - TR/Şovalye Etkileşimleri
 	public void lookKnight() {
 		gm.ui.messageText.setText("Look Something?\n(Skyrim Creatur.)");
 	}
@@ -61,18 +59,15 @@ public class Event01 {
 				if(gm.player.playerLife!=1) {
 				gm.ui.messageText.setText("Guard: Hey, Don't be stupid!\n(Guard hit you back and your life decreases one.)");
 				gm.player.playerLife--;
-//				gm.player.updatePlayerStatus();
 				}
 				else if(gm.player.playerLife==1) {
 					gm.ui.messageText.setText("Guard: What a fool one...");
 					gm.player.playerLife--;
-//					gm.player.updatePlayerStatus();
 				}
 			}
 			else if(gm.player.hasSword==1) {
 				gm.ui.messageText.setText("Guard: What the ..!?(Sounds of stabbing in the back.)\nYou earned the knight's shield in an questionable duel.");
 				gm.player.hasShield=1;
-//				gm.player.updatePlayerStatus();
 			}
 			gm.player.updatePlayerStatus();
 		}
@@ -85,10 +80,8 @@ public class Event01 {
 			gm.ui.messageText.setText("More stabbing sounds..");
 		}
 	}
-				
 
-	/*Sandık mesajları*/
-	
+//	ENG/Chest Interactions - TR/Sandık Etkileşimleri
 	public void lookChest() {
 		gm.ui.messageText.setText("This chest look like from another dimension.");
 	}
