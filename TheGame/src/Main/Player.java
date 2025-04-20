@@ -4,8 +4,12 @@ public class Player {
 	
 	GameManager gm;
 	
+	public int lifeCounter;
+	public int knightCounter;
+	
 	public int playerMaxLife;
 	public int playerLife;
+	
 	
 	public int hasSword;
 	public int hasShield;
@@ -25,6 +29,9 @@ public class Player {
 		hasSword = 0;
 		hasShield = 0;
 		hasLantern = 0;
+		
+		lifeCounter = 0;
+		knightCounter = 0;
 		
 		updatePlayerStatus();
 	}
