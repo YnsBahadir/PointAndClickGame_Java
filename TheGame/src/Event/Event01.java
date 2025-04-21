@@ -24,13 +24,17 @@ public class Event01 {
 			gm.ui.messageText.setText("You realize you have enough gold to rest in this Tavern.\n(Your life has recovered.)");
 			gm.player.playerLife++;
 			gm.player.lifeCounter++;
-			gm.player.updatePlayerStatus();	
+			gm.player.updatePlayerStatus();
+			
+			gm.playSE(gm.healSound);
 		}
 		else if((gm.player.lifeCounter!=0)&&(gm.player.playerLife != gm.player.playerMaxLife)) {
 			gm.ui.messageText.setText("You rest at the Tavern. \n(Your life has recovered.)");
 			gm.player.playerLife++;
 			gm.player.lifeCounter++;
 			gm.player.updatePlayerStatus();
+			
+			gm.playSE(gm.healSound);
 		}
 		else if(gm.player.lifeCounter==6) {
 			gm.ui.messageText.setText("Creater: You're a lazy one, huh?");
@@ -48,7 +52,8 @@ public class Event01 {
 	
 //	ENG/Knight Interactions - TR/Şovalye Etkileşimleri
 	public void lookKnight() {
-		gm.ui.messageText.setText("Look Something?\n(Skyrim Creatur.)");
+		gm.ui.messageText.setText("Need Something?\n(Skyrim Creatur.)");
+		gm.playSE(gm.guardLook);
 	}
 	public void talkKnight() {
 		gm.ui.messageText.setText("Guard: Don't go any further without weapon!");
@@ -59,16 +64,20 @@ public class Event01 {
 				if(gm.player.playerLife!=1) {
 				gm.ui.messageText.setText("Guard: Hey, Don't be stupid!\n(Guard hit you back and your life decreases one.)");
 				gm.player.playerLife--;
+				gm.playSE(gm.hurtSound);
 				}
 				else if(gm.player.playerLife==1) {
 					gm.ui.messageText.setText("Guard: What a fool one...");
 					gm.player.playerLife--;
+					gm.playSE(gm.hurtSound);
 					gm.sChanger.showGameOverScreen(1);
 				}
 			}
 			else if(gm.player.hasSword==1) {
 				gm.ui.messageText.setText("Guard: What the ..!?(Sounds of stabbing in the back.)\nYou earned the knight's shield in an questionable duel.");
 				gm.player.hasShield = 1;
+				
+				gm.playSE(gm.guardPunch);
 			}
 			gm.player.updatePlayerStatus();
 		}
@@ -76,9 +85,13 @@ public class Event01 {
 			gm.ui.messageText.setText("Guard: Just LEAVE ME ALONE!");
 			gm.player.knightCounter++;
 			gm.player.updatePlayerStatus();
+			
+			gm.playSE(gm.guardLeave);
 		}
 		else if((gm.player.hasShield==1)&&(gm.player.knightCounter==1)){
 			gm.ui.messageText.setText("More stabbing sounds..");
+			
+			gm.playSE(gm.guardPunch);
 		}
 	}
 
@@ -94,10 +107,13 @@ public class Event01 {
 			gm.ui.messageText.setText("You found a Sword*.");
 			gm.player.hasSword=1;
 			gm.player.updatePlayerStatus();
+			
+			gm.playSE(gm.chestSound);
 		}
 		else {
 			gm.ui.messageText.setText("There's nothing left inside in it.");
+			
+			gm.playSE(gm.chestSound);
 		}
-		
 	}
 }

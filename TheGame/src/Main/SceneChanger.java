@@ -21,6 +21,12 @@ public class SceneChanger {
 		gm.ui.bgPanel[2].setVisible(true);
 		gm.ui.bgPanel[3].setVisible(false);
 		gm.ui.messageText.setText("");
+		
+		if(gm.currentMusic == gm.bossMusic) {
+			gm.stopMusic(gm.currentMusic);
+			gm.currentMusic = gm.fieldMusic;
+			gm.playMusic(gm.currentMusic);
+		}
 	}
 	public void showScreen3() {
 		
@@ -28,7 +34,11 @@ public class SceneChanger {
 		gm.ui.bgPanel[2].setVisible(false);
 		gm.ui.bgPanel[3].setVisible(true);
 		gm.ui.messageText.setText("You enter the cave. What is waiting for you inside...\n\n"
-				+ "*** This is the end of the DEMO. Thank you for playing. :3 ***");
+				+ "* This is the end of the DEMO. Thank you for playing. :3 *");
+		
+		gm.stopMusic(gm.currentMusic);
+		gm.currentMusic = gm.bossMusic;
+		gm.playMusic(gm.currentMusic);
 	}
 	public void showGameOverScreen(int currentBgNum) {
 		
@@ -37,11 +47,18 @@ public class SceneChanger {
 		gm.ui.titleLabel.setText("YOU DIED");
 		gm.ui.restartButton.setVisible(true);
 		gm.ui.restartButton.setText("Click here to Restart");
+		
+		gm.stopMusic(gm.currentMusic);
+		gm.currentMusic = gm.gameOver;
+		gm.playSE(gm.gameOver);
 	}
 	public void exitGameOverScreen() {
 		
 		gm.ui.titleLabel.setVisible(false);
 		gm.ui.restartButton.setVisible(false);
 		gm.player.setPlayerDefaultStatus();
+		
+		gm.currentMusic = gm.fieldMusic;
+		gm.playMusic(gm.currentMusic);
 	}
 }

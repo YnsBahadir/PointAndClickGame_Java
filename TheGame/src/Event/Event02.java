@@ -31,13 +31,14 @@ public class Event02 {
 		gm.ui.messageText.setText("This place also looks like a cave, but it's smaller inside.");
 	}
 	public void talkMiniCave() {
-		gm.ui.messageText.setText("How are you, little hole?\n(Of course there is no response.");
+		gm.ui.messageText.setText("How are you, little hole?\n(Of course there is no response.)");
 	}
 	public void searchMiniCave() {
 		if(gm.player.hasLantern==0) {
 			gm.ui.messageText.setText("You found old Lantern.*");
 			gm.player.hasLantern = 1;
 			gm.player.updatePlayerStatus();
+			gm.playSE(gm.itemFound);
 		}
 		else if (gm.player.hasLantern==1) {
 			gm.ui.messageText.setText("There is nothing else inside.");

@@ -55,7 +55,7 @@ public class UI {
 	
 	public void createMainField() {
 		 
-		window = new JFrame();
+		window = new JFrame("Adventure Asylum I.");
 		window.setSize(800,600);
 		window.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		window.getContentPane().setBackground(Color.black);
