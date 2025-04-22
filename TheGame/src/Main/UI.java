@@ -252,9 +252,9 @@ public class UI {
 		createObject(3, 290,140,165,230, "wolfBack165x230.png", "Look", "Talk", "Attack", "lookWolf", "talkWolf", "attackWolf");
 		bgPanel[3].add(bgLabel[3]);
 		
-		//Scene 4
+		//Scene 4 ↸𝙹リℸ ̣ ∷⚍ リ
 		createBackground(4, "Cave700x350.jpg");
-		createObject(4, 170,50,355,315, "Moonless360x315.png", "Run","Guard", "Attack", "runMoon", "guardMoon", "attackMoon");
+		createObject(4, 170,50,355,315, "Moonless360x315.png", "Run","Block", "Attack", "runMoon", "blockMoon", "attackMoon");
 		bgPanel[4].add(bgLabel[4]);
 	}
 }

@@ -39,6 +39,7 @@ public class GameManager {
 	public URL chestSound = getClass().getClassLoader().getResource("audio//MinecraftChest.wav");
 	public URL guardLook = getClass().getClassLoader().getResource("audio//needSomething.wav");
 	public URL guardPunch = getClass().getClassLoader().getResource("audio//punchGame.wav");
+	public URL questComplete = getClass().getClassLoader().getResource("audio//questComplete.wav");
 	public URL healSound = getClass().getClassLoader().getResource("audio//SnoreCut.wav");
 	public URL hurtSound = getClass().getClassLoader().getResource("audio//steveHurt.wav");
 	public URL wolfSound = getClass().getClassLoader().getResource("audio//WolfSound.wav");

@@ -49,7 +49,7 @@ public class ActionHandler implements ActionListener {
 			
 //			ENG/Scene 4 Intreactions - TR/Sahne 4 etkileşimleri
 			case "runMoon": gm.ev4.runMoon(); break;
-			case "guardMoon": gm.ev4.guardMoon(); break;
+			case "blockMoon": gm.ev4.blockMoon(); break;
 			case "attackMoon": gm.ev4.attackMoon(); break;
 			
 //			ENG/Change Scene - TR/Sahne Değiştirme

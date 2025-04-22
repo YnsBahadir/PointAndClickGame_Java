@@ -49,7 +49,7 @@ public class SceneChanger {
 		gm.ui.bgPanel[2].setVisible(false);
 		gm.ui.bgPanel[3].setVisible(false);
 		gm.ui.bgPanel[4].setVisible(true);
-		gm.ui.messageText.setText("I'm gonna KILL YOU!!");
+		gm.ui.messageText.setText("The monster has noticed you, defend its attack!");
 		
 		gm.stopMusic(gm.currentMusic);
 		gm.currentMusic = gm.ashesOfWar;
@@ -64,8 +64,18 @@ public class SceneChanger {
 		gm.ui.restartButton.setText("Click here to Restart");
 		
 		gm.stopMusic(gm.currentMusic);
-		gm.currentMusic = gm.gameOver;
 		gm.playSE(gm.gameOver);
+	}
+	public void wolfDefeatScreen(int currentBgNum) {
+		
+		gm.ui.bgPanel[currentBgNum].setVisible(false);
+		gm.ui.titleLabel.setVisible(true);
+		gm.ui.titleLabel.setText("Congratulations You Saved the Village!");
+		gm.ui.restartButton.setVisible(true);
+		gm.ui.restartButton.setText("Click here to Restart");
+		
+		gm.stopMusic(gm.currentMusic);
+		gm.playSE(gm.questComplete);
 	}
 	public void exitGameOverScreen() {
 		
