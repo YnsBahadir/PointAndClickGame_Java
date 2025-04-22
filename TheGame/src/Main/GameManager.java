@@ -10,6 +10,8 @@ import java.net.URL;
 
 import Event.Event01;
 import Event.Event02;
+import Event.Event03;
+import Event.Event04;
 
 public class GameManager {
 
@@ -23,8 +25,11 @@ public class GameManager {
 	
 	public Event01 ev1 = new Event01(this);
 	public Event02 ev2 = new Event02(this);
+	public Event03 ev3 = new Event03(this);
+	public Event04 ev4 = new Event04(this);
 	
 //	Sounds
+	public URL ashesOfWar = getClass().getClassLoader().getResource("audio//AshesOfWar.wav");
 	public URL bossMusic = getClass().getClassLoader().getResource("audio//CuthuluBoss.wav");
 	public URL gameOver = getClass().getClassLoader().getResource("audio//gameOver.wav");
 	public URL iAmSteve = getClass().getClassLoader().getResource("audio//iAmSteve.wav");
@@ -36,6 +41,7 @@ public class GameManager {
 	public URL guardPunch = getClass().getClassLoader().getResource("audio//punchGame.wav");
 	public URL healSound = getClass().getClassLoader().getResource("audio//SnoreCut.wav");
 	public URL hurtSound = getClass().getClassLoader().getResource("audio//steveHurt.wav");
+	public URL wolfSound = getClass().getClassLoader().getResource("audio//WolfSound.wav");
 	public URL dogSound = getClass().getClassLoader().getResource("audio//wtDogDoin.wav");
 	public URL currentMusic;
 	

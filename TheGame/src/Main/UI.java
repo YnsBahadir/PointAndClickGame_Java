@@ -249,7 +249,13 @@ public class UI {
 		//Scene 3 
 		createBackground(3, "Cave700x350.jpg");
 		createArrowButton(3, 650, 150, 50, 50, "rightArrow60x50HandMade.png", "goScene2");
+		createObject(3, 290,140,165,230, "wolfBack165x230.png", "Look", "Talk", "Attack", "lookWolf", "talkWolf", "attackWolf");
 		bgPanel[3].add(bgLabel[3]);
+		
+		//Scene 4
+		createBackground(4, "Cave700x350.jpg");
+		createObject(4, 170,50,355,315, "Moonless360x315.png", "Run","Guard", "Attack", "runMoon", "guardMoon", "attackMoon");
+		bgPanel[4].add(bgLabel[4]);
 	}
 }
 

@@ -13,6 +13,7 @@ public class SceneChanger {
 		gm.ui.bgPanel[1].setVisible(true);
 		gm.ui.bgPanel[2].setVisible(false);
 		gm.ui.bgPanel[3].setVisible(false);
+		gm.ui.bgPanel[4].setVisible(false);
 		gm.ui.messageText.setText("Let's defeat the Demon and save the Town!");
 	}
 	public void showScreen2() {
@@ -20,6 +21,7 @@ public class SceneChanger {
 		gm.ui.bgPanel[1].setVisible(false);
 		gm.ui.bgPanel[2].setVisible(true);
 		gm.ui.bgPanel[3].setVisible(false);
+		gm.ui.bgPanel[4].setVisible(false);
 		gm.ui.messageText.setText("");
 		
 		if(gm.currentMusic == gm.bossMusic) {
@@ -33,11 +35,24 @@ public class SceneChanger {
 		gm.ui.bgPanel[1].setVisible(false);
 		gm.ui.bgPanel[2].setVisible(false);
 		gm.ui.bgPanel[3].setVisible(true);
+		gm.ui.bgPanel[4].setVisible(false);
 		gm.ui.messageText.setText("You enter the cave. What is waiting for you inside...\n\n"
 				+ "* This is the end of the DEMO. Thank you for playing. :3 *");
 		
 		gm.stopMusic(gm.currentMusic);
 		gm.currentMusic = gm.bossMusic;
+		gm.playMusic(gm.currentMusic);
+	}
+	public void showScreen4() {
+		
+		gm.ui.bgPanel[1].setVisible(false);
+		gm.ui.bgPanel[2].setVisible(false);
+		gm.ui.bgPanel[3].setVisible(false);
+		gm.ui.bgPanel[4].setVisible(true);
+		gm.ui.messageText.setText("I'm gonna KILL YOU!!");
+		
+		gm.stopMusic(gm.currentMusic);
+		gm.currentMusic = gm.ashesOfWar;
 		gm.playMusic(gm.currentMusic);
 	}
 	public void showGameOverScreen(int currentBgNum) {

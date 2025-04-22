@@ -42,9 +42,22 @@ public class ActionHandler implements ActionListener {
 			case "talkMiniCave": gm.ev2.talkMiniCave(); break;
 			case "searchMiniCave": gm.ev2.searchMiniCave(); break;
 			
+//			ENG/Scene 3 Intreactions - TR/Sahne 3 etkileşimleri
+			case "lookWolf": gm.ev3.lookWolf(); break;
+			case "talkWolf": gm.ev3.talkWolf(); break;
+			case "attackWolf": gm.ev3.attackWolf(); break;
+			
+//			ENG/Scene 4 Intreactions - TR/Sahne 4 etkileşimleri
+			case "runMoon": gm.ev4.runMoon(); break;
+			case "guardMoon": gm.ev4.guardMoon(); break;
+			case "attackMoon": gm.ev4.attackMoon(); break;
+			
 //			ENG/Change Scene - TR/Sahne Değiştirme
 			case "goScene1": gm.sChanger.showScreen1(); break;
 			case "goScene2": gm.sChanger.showScreen2(); break;
+			
+			//Delete
+			case "goScene4": gm.sChanger.showScreen4(); break;
 			
 //			ENG/Others - TR/Diğerleri
 			case "restart": gm.sChanger.exitGameOverScreen(); gm.sChanger.showScreen1(); break;

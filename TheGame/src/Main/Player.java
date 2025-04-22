@@ -10,6 +10,8 @@ public class Player {
 	public int playerMaxLife;
 	public int playerLife;
 	
+	public int monsterCounter;
+	
 	public int hasSword;
 	public int hasShield;
 	public int hasLantern;
@@ -29,6 +31,7 @@ public class Player {
 		
 		lifeCounter = 0;
 		knightCounter = 0;
+		monsterCounter = 0;
 		
 		updatePlayerStatus();
 	}
