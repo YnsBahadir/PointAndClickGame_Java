@@ -1,5 +1,8 @@
 package Event;
 
+import java.net.URL;
+import java.util.Random;
+
 import Main.GameManager;
 
 public class Event01 {
@@ -56,7 +59,53 @@ public class Event01 {
 		gm.playSE(gm.guardLook);
 	}
 	public void talkKnight() {
-		gm.ui.messageText.setText("Guard: Don't go any further without weapon!");
+		
+//		ENG/Random Music Player Code - TR/Rastgele Müzik Oynatıcı		
+		URL[] villagerSounds = {
+			    gm.villagerAccept,
+			    gm.villagerHard,
+			    gm.villager3,
+			    gm.villager4,
+			    gm.villager5,
+			    gm.villager6
+			};
+
+			Random rand = new Random();
+			int index = rand.nextInt(villagerSounds.length);
+			
+		if(gm.player.knighttalkCounter == 0) {
+			gm.ui.messageText.setText("Guard: Hello Adventurer!");
+			gm.player.knighttalkCounter++;
+			gm.player.updatePlayerStatus();
+			
+			gm.playSE(villagerSounds[index]);
+		}
+		else if (gm.player.knighttalkCounter == 1) {
+			gm.ui.messageText.setText("Guard: Theres some Monster in the caves, please save the Village!");
+			gm.player.knighttalkCounter++;
+			gm.player.updatePlayerStatus();
+			
+			gm.playSE(villagerSounds[index]);
+		}
+		else if ((gm.player.hasSword==0)&&(gm.player.knighttalkCounter==2)) {
+			gm.ui.messageText.setText("Guard: Please take the sword from the chest next to me with you.");
+			gm.player.knighttalkCounter++;
+			gm.player.updatePlayerStatus();
+			
+			gm.playSE(villagerSounds[index]);
+		}
+		else if ((gm.player.hasSword==1)&&(gm.player.knighttalkCounter==2)) {
+			gm.ui.messageText.setText("Guard: I see you have already taken the sword.");
+			gm.player.knighttalkCounter++;
+			gm.player.updatePlayerStatus();
+			
+			gm.playSE(villagerSounds[index]);
+		}
+		else if ((gm.player.hasSword==1)&&(gm.player.knighttalkCounter>=3)) {
+			gm.ui.messageText.setText("Guard: Now go and save the village!");
+			
+			gm.playSE(villagerSounds[index]);
+		}
 	}
 	public void attackKnight() {
 		if(gm.player.hasShield==0) {
@@ -74,7 +123,7 @@ public class Event01 {
 				}
 			}
 			else if(gm.player.hasSword==1) {
-				gm.ui.messageText.setText("Guard: What the ..!?(Sounds of stabbing in the back.)\nYou earned the knight's shield in an questionable duel.");
+				gm.ui.messageText.setText("Guard: What the ..!?(Sounds of punching in the back.)\nYou earned the knight's shield in an questionable duel.");
 				gm.player.hasShield = 1;
 				
 				gm.playSE(gm.guardPunch);
@@ -89,12 +138,11 @@ public class Event01 {
 			gm.playSE(gm.guardLeave);
 		}
 		else if((gm.player.hasShield==1)&&(gm.player.knightCounter==1)){
-			gm.ui.messageText.setText("More stabbing sounds..");
+			gm.ui.messageText.setText("More punching sounds..");
 			
 			gm.playSE(gm.guardPunch);
 		}
 	}
-
 //	ENG/Chest Interactions - TR/Sandık Etkileşimleri
 	public void lookChest() {
 		gm.ui.messageText.setText("This chest look like from another dimension.");

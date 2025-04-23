@@ -75,7 +75,7 @@ public class UI {
 	public void createBackground(int bgNum, String bgFileName) {
 		bgPanel[bgNum] = new JPanel();
 		bgPanel[bgNum].setBounds(50,50,700,350);
-		bgPanel[bgNum].setBackground(Color.green);
+		bgPanel[bgNum].setBackground(Color.black);
 		bgPanel[bgNum].setLayout(null);
 		bgPanel[bgNum].setVisible(false);
 		window.add(bgPanel[bgNum]);
@@ -85,8 +85,6 @@ public class UI {
 		
 		ImageIcon bgIcon = new ImageIcon(getClass().getClassLoader().getResource(bgFileName));
 		bgLabel[bgNum].setIcon(bgIcon);
-		
-		
 		
 	}
 	public void createObject(int bgNum, int objx, int objy, int objWidth, int objHeight, String objFileName,
@@ -116,7 +114,7 @@ public class UI {
 		objectLabel.setBounds(objx, objy, objWidth, objHeight);
 		
 		//Png Arka Plan görme Kodu
-		objectLabel.setOpaque(true);
+		objectLabel.setOpaque(false);
 		objectLabel.setBackground(Color.green);
 		
 		ImageIcon objectIcon = new ImageIcon(getClass().getClassLoader().getResource(objFileName));
@@ -228,7 +226,6 @@ public class UI {
 		restartButton.setVisible(false);
 		window.add(restartButton);
 	}
-	
 	public void generateScene() {
 		
 		//Scene 1
@@ -249,13 +246,17 @@ public class UI {
 		//Scene 3 
 		createBackground(3, "Cave700x350.jpg");
 		createArrowButton(3, 650, 150, 50, 50, "rightArrow60x50HandMade.png", "goScene2");
-		createObject(3, 290,140,165,230, "wolfBack165x230.png", "Look", "Talk", "Attack", "lookWolf", "talkWolf", "attackWolf");
+		createObject(3, 290,140,165,230, "wolfBack165x230.png", "Look", "Talk", "Scare", "lookWolf", "talkWolf", "attackWolf");
 		bgPanel[3].add(bgLabel[3]);
 		
 		//Scene 4 ↸𝙹リℸ ̣ ∷⚍ リ
 		createBackground(4, "Cave700x350.jpg");
 		createObject(4, 170,50,355,315, "Moonless360x315.png", "Run","Block", "Attack", "runMoon", "blockMoon", "attackMoon");
 		bgPanel[4].add(bgLabel[4]);
+		
+		createBackground(5, "heroDeath350x350.jpg");
+		bgLabel[5].setBounds(175, 0, 350, 350);
+		bgPanel[5].add(bgLabel[5]);
 	}
 }
 

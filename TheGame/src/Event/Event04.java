@@ -18,7 +18,7 @@ public class Event04 {
 		
 		if(gm.player.hasShield==0) {
 			if((gm.player.playerLife==1)||(gm.player.playerLife==2)) {
-				gm.ui.messageText.setText("By the time our hero realized that his royal cotton suit was useless against the monsters, it was too late.");
+				gm.ui.messageText.setText("By the time our hero realized that his royal cotton suit was useless against the enemy, it was too late.");
 				gm.player.playerLife-=2;
 				gm.playSE(gm.hurtSound);
 				gm.sChanger.showGameOverScreen(4);
@@ -41,8 +41,8 @@ public class Event04 {
 			gm.sChanger.wolfDefeatScreen(4);
 		}
 		else if((gm.player.hasSword==1)&&(gm.player.hasShield==0)) {
-			gm.ui.messageText.setText("You successfully defeated the monster, but for what cost...");
-			gm.sChanger.wolfDefeatScreen(4);
+			gm.ui.messageText.setText("You successfully defeated the monster, but what cost...");
+			gm.sChanger.showScreen5();
 		}
 	}
 }

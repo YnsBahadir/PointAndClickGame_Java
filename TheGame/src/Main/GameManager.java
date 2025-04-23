@@ -29,9 +29,10 @@ public class GameManager {
 	public Event04 ev4 = new Event04(this);
 	
 //	Sounds
-	public URL ashesOfWar = getClass().getClassLoader().getResource("audio//AshesOfWar.wav");
+	public URL ashesOfWar = getClass().getClassLoader().getResource("audio//AshesOfWar2.wav");
 	public URL bossMusic = getClass().getClassLoader().getResource("audio//CuthuluBoss.wav");
 	public URL gameOver = getClass().getClassLoader().getResource("audio//gameOver.wav");
+	public URL heroAndDogDeath = getClass().getClassLoader().getResource("audio//heroDeathMusic.wav");
 	public URL iAmSteve = getClass().getClassLoader().getResource("audio//iAmSteve.wav");
 	public URL itemFound = getClass().getClassLoader().getResource("audio//itemFound.wav");
 	public URL fieldMusic = getClass().getClassLoader().getResource("audio//medAbbey.wav");
@@ -42,6 +43,12 @@ public class GameManager {
 	public URL questComplete = getClass().getClassLoader().getResource("audio//questComplete.wav");
 	public URL healSound = getClass().getClassLoader().getResource("audio//SnoreCut.wav");
 	public URL hurtSound = getClass().getClassLoader().getResource("audio//steveHurt.wav");
+	public URL villagerHard = getClass().getClassLoader().getResource("audio//vilagerHard.wav");
+	public URL villager3 = getClass().getClassLoader().getResource("audio//villager3.wav");
+	public URL villager4 = getClass().getClassLoader().getResource("audio//villager4.wav");
+	public URL villager5 = getClass().getClassLoader().getResource("audio//villager5.wav");
+	public URL villager6 = getClass().getClassLoader().getResource("audio//villager6.wav");
+	public URL villagerAccept = getClass().getClassLoader().getResource("audio//villagerAccept.wav");
 	public URL wolfSound = getClass().getClassLoader().getResource("audio//WolfSound.wav");
 	public URL dogSound = getClass().getClassLoader().getResource("audio//wtDogDoin.wav");
 	public URL currentMusic;

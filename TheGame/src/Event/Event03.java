@@ -13,14 +13,16 @@ public class Event03 {
 		
 		public void lookWolf() {
 			
-			gm.ui.messageText.setText("It's a Monster!");
+			gm.ui.messageText.setText("What is a dog doing in a cave?");
+			gm.playSE(gm.dogSound);
 		}
 		public void talkWolf() {
-			
-			gm.ui.messageText.setText("Talking to a Monster is not a good idea.");
+
+			gm.sChanger.showScreen4();
 		}
 		public void attackWolf() {
 			
+			gm.player.talkOrScare++;
 			gm.sChanger.showScreen4();
 		}
 }

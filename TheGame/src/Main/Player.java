@@ -6,6 +6,8 @@ public class Player {
 	
 	public int lifeCounter;
 	public int knightCounter;
+	public int knighttalkCounter;
+	public int talkOrScare;
 	
 	public int playerMaxLife;
 	public int playerLife;
@@ -29,6 +31,9 @@ public class Player {
 		
 		lifeCounter = 0;
 		knightCounter = 0;
+		knighttalkCounter = 0;
+		
+		talkOrScare = 0;
 		
 		updatePlayerStatus();
 	}
