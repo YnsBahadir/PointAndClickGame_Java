@@ -18,8 +18,12 @@ public class Event01 {
 	public void lookHut() {
 		gm.ui.messageText.setText("This Hut should be Local Tavern. If I have enough coin, I can rest here.");
 	}
-	public void talkHut() {
-		gm.ui.messageText.setText("What the hell am I doing..\nHuts can't talk, can they?");
+	public void enterHut() {
+		gm.sChanger.showScreen6();
+		
+		gm.stopMusic(gm.currentMusic);
+		gm.currentMusic=gm.tavernMain;
+		gm.playMusic(gm.currentMusic);
 	}
 	public void restHut() {
 		

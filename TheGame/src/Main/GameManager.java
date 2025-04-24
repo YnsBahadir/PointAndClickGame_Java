@@ -43,6 +43,11 @@ public class GameManager {
 	public URL questComplete = getClass().getClassLoader().getResource("audio//questComplete.wav");
 	public URL healSound = getClass().getClassLoader().getResource("audio//SnoreCut.wav");
 	public URL hurtSound = getClass().getClassLoader().getResource("audio//steveHurt.wav");
+	public URL tavern1 = getClass().getClassLoader().getResource("audio//tavern1.wav");
+	public URL tavern2 = getClass().getClassLoader().getResource("audio//tavern2.wav");
+	public URL tavern3 = getClass().getClassLoader().getResource("audio//tavern3.wav");
+	public URL tavern4 = getClass().getClassLoader().getResource("audio//tavern4.wav");
+	public URL tavernMain = getClass().getClassLoader().getResource("audio//tavernMain.wav");
 	public URL villagerHard = getClass().getClassLoader().getResource("audio//vilagerHard.wav");
 	public URL villager3 = getClass().getClassLoader().getResource("audio//villager3.wav");
 	public URL villager4 = getClass().getClassLoader().getResource("audio//villager4.wav");

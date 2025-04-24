@@ -22,7 +22,7 @@ public class ActionHandler implements ActionListener {
 		switch(yourChoice){
 //			ENG/Scene 1 Intreactions - TR/Sahne 1 etkileşimleri
 			case "lookHut": gm.ev1.lookHut(); break;
-			case "talkHut": gm.ev1.talkHut(); break;
+			case "enterHut": gm.ev1.enterHut(); break;
 			case "restHut": gm.ev1.restHut(); break;
 			
 			case "lookKnight": gm.ev1.lookKnight(); break;

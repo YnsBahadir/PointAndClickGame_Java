@@ -41,8 +41,11 @@ public class Event04 {
 			gm.sChanger.wolfDefeatScreen(4);
 		}
 		else if((gm.player.hasSword==1)&&(gm.player.hasShield==0)) {
-			gm.ui.messageText.setText("You successfully defeated the monster, but what cost...");
-			gm.sChanger.showScreen5();
+			gm.ui.messageText.setText("You defeated the monster, It cost your life but it's worth now the village is safe.\nRest in Peace");
+			gm.sChanger.showEndingEgual();
+		}
+		else if(gm.player.hasSword==0) {
+			gm.ui.messageText.setText("You have no weapons to attack with!");
 		}
 	}
 }

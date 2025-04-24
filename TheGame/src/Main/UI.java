@@ -211,7 +211,7 @@ public class UI {
 		titleLabel = new JLabel("", JLabel.CENTER);
 		titleLabel.setBounds(200, 150, 400, 200);
 		titleLabel.setForeground(Color.red);
-		titleLabel.setFont(new Font("Times New Roman", Font.PLAIN, 70));
+		titleLabel.setFont(new Font("Times New Roman", Font.PLAIN, 80));
 		titleLabel.setVisible(false);
 		window.add(titleLabel);
 		
@@ -230,7 +230,7 @@ public class UI {
 		
 		//Scene 1
 		createBackground(1, "PanelOne700.jpg");
-		createObject(1, 450,50,200,200, "woodenshedP.png", "Look", "Talk", "Rest", "lookHut", "talkHut", "restHut");
+		createObject(1, 450,50,200,200, "woodenshedP.png", "Look", "Enter", "Rest", "lookHut", "enterHut", "restHut");
 		createObject(1, 90,55,120,300, "knight120x300.png", "Look", "Talk", "Attack", "lookKnight", "talkKnight", "attackKnight");
 		createObject(1, 300,270,76,60, "chest76x60.png", "Look", "Talk", "Open", "lookChest", "talkChest", "openChest");
 		createArrowButton(1, 0, 150, 50, 50, "leftArrow60x50HandMade.png", "goScene2");
@@ -254,9 +254,15 @@ public class UI {
 		createObject(4, 170,50,355,315, "Moonless360x315.png", "Run","Block", "Attack", "runMoon", "blockMoon", "attackMoon");
 		bgPanel[4].add(bgLabel[4]);
 		
+		//Ending 5
 		createBackground(5, "heroDeath350x350.jpg");
 		bgLabel[5].setBounds(175, 0, 350, 350);
 		bgPanel[5].add(bgLabel[5]);
+		
+		//Scene 6
+		createBackground(6, "taverna700x350.png");
+		createArrowButton(6, 320, 300, 50, 60, "downArrow50x60.png", "goScene1");
+		bgPanel[6].add(bgLabel[6]);
 	}
 }
 
