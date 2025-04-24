@@ -7,7 +7,6 @@ public class Player {
 	public int lifeCounter;
 	public int knightCounter;
 	public int knighttalkCounter;
-	public int talkOrScare;
 	public int chestCounter;
 	
 	public int playerMaxLife;
@@ -16,6 +15,8 @@ public class Player {
 	public int hasSword;
 	public int hasShield;
 	public int hasLantern;
+	public int hasMeat;
+	public int hasWolf;
 	
 	public Player(GameManager gm) {
 		this.gm = gm;
@@ -29,13 +30,14 @@ public class Player {
 		hasSword = 0;
 		hasShield = 0;
 		hasLantern = 0;
+		hasMeat = 0;
+		hasWolf = 0;
 		
 		lifeCounter = 0;
 		knightCounter = 0;
 		knighttalkCounter = 0;
 		chestCounter = 0;
 		
-		talkOrScare = 0;
 		
 		updatePlayerStatus();
 	}
@@ -77,6 +79,22 @@ public class Player {
 		}
 		if(hasLantern==1) {
 			gm.ui.lanternLabel.setVisible(true);
+		}
+		
+		
+		if(hasMeat==0) {
+			gm.ui.meatLabel.setVisible(false);
+		}
+		if(hasMeat==1) {
+			gm.ui.meatLabel.setVisible(true);
+		}
+		
+		
+		if(hasWolf==0) {
+			gm.ui.wolfLabel.setVisible(false);
+		}
+		if(hasWolf==1) {
+			gm.ui.wolfLabel.setVisible(true);
 		}
 	}
 	

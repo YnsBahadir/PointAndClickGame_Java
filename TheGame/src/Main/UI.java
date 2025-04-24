@@ -25,15 +25,15 @@ public class UI {
 	JFrame window;
 	public JTextArea messageText;
 //	ENG/Using array more functional more than added background one by one - TR/Alt kısımda array kullanıyorum çünkü backgrounları tek tek eklemekten daha işlevsel
-	public JPanel bgPanel[] = new JPanel[10];
-	public JLabel bgLabel[] = new JLabel[10];
+	public JPanel bgPanel[] = new JPanel[15];
+	public JLabel bgLabel[] = new JLabel[15];
 	
 
 //	Player UI	
 	JPanel lifePanel;
 	JLabel lifeLabel[] = new JLabel[6];
 	JPanel inventoryPanel;
-	public JLabel swordLabel, shieldLabel, lanternLabel;
+	public JLabel swordLabel, shieldLabel, lanternLabel, meatLabel, wolfLabel;
 	
 	
 //	GAME OVER UI
@@ -185,9 +185,9 @@ public class UI {
 		}
 		
 		inventoryPanel = new JPanel();
-		inventoryPanel.setBounds(650, 0, 100, 50);
+		inventoryPanel.setBounds(580, 0, 175, 50);
 		inventoryPanel.setBackground(Color.black);
-		inventoryPanel.setLayout(new GridLayout(1,3));
+		inventoryPanel.setLayout(new GridLayout(1,5));
 		window.add(inventoryPanel);
 		
 		//Create Items 
@@ -205,6 +205,16 @@ public class UI {
 		ImageIcon lanternIcon = new ImageIcon(getClass().getClassLoader().getResource("lFlame35x35.png"));
 		lanternLabel.setIcon(lanternIcon);
 		inventoryPanel.add(lanternLabel);
+		
+		meatLabel = new JLabel();
+		ImageIcon meatIcon = new ImageIcon(getClass().getClassLoader().getResource("meat35x35.png"));
+		meatLabel.setIcon(meatIcon);
+		inventoryPanel.add(meatLabel);
+		
+		wolfLabel = new JLabel();
+		ImageIcon wolfIcon = new ImageIcon(getClass().getClassLoader().getResource("wolfLove35x35.png"));
+		wolfLabel.setIcon(wolfIcon);
+		inventoryPanel.add(wolfLabel);
 	}
 	
 	public void createGameOverField() {
@@ -257,10 +267,16 @@ public class UI {
 		
 		//Scene 6
 		createBackground(6, "taverna700x350.png");
+		createArrowButton(6, 650, 150, 50, 50, "rightArrow60x50HandMade.png", "goScene9");
 		createArrowButton(6, 320, 300, 50, 60, "downArrow50x60.png", "goScene1");
 		createObject(6, 320,150,185,125, "liarTable185x125.png", "Look", "Talk", "Join", "lookTable", "talkTable", "joinTable");
 		createObject(6, 135,170,91,180, "fearGirl91x180.png", "Look", "Talk", "Gift", "lookGirl", "talkGirl", "giftGirl");
 		bgPanel[6].add(bgLabel[6]);
+		
+		//Scene 9
+		createBackground(9, "tavernBar700x350.jpg");
+		createArrowButton(9, 0, 150, 50, 50, "leftArrow60x50HandMade.png", "goScene6");
+		bgPanel[9].add(bgLabel[9]);
 		
 		//Ending 5
 		createBackground(5, "heroDeath350x350.jpg");

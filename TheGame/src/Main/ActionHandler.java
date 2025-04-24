@@ -64,6 +64,8 @@ public class ActionHandler implements ActionListener {
 //			ENG/Change Scene - TR/Sahne Değiştirme
 			case "goScene1": gm.sChanger.showScreen1(); break;
 			case "goScene2": gm.sChanger.showScreen2(); break;
+			case "goScene6": gm.sChanger.showScreen6(); break;
+			case "goScene9": gm.sChanger.showScreen9(); break;
 			
 			//Delete
 			case "goScene4": gm.sChanger.showScreen4(); break;

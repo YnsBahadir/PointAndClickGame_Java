@@ -18,6 +18,7 @@ public class SceneChanger {
 		gm.ui.bgPanel[6].setVisible(false);
 		gm.ui.bgPanel[7].setVisible(false);
 		gm.ui.bgPanel[8].setVisible(false);
+		gm.ui.bgPanel[9].setVisible(false);
 		gm.ui.messageText.setText("Let's go to Adventure!!");
 		
 		gm.stopMusic(gm.currentMusic);
@@ -34,6 +35,7 @@ public class SceneChanger {
 		gm.ui.bgPanel[6].setVisible(false);
 		gm.ui.bgPanel[7].setVisible(false);
 		gm.ui.bgPanel[8].setVisible(false);
+		gm.ui.bgPanel[9].setVisible(false);
 		gm.ui.messageText.setText("");
 		
 		if(gm.currentMusic == gm.bossMusic) {
@@ -52,6 +54,7 @@ public class SceneChanger {
 		gm.ui.bgPanel[6].setVisible(false);
 		gm.ui.bgPanel[7].setVisible(false);
 		gm.ui.bgPanel[8].setVisible(false);
+		gm.ui.bgPanel[9].setVisible(false);
 		gm.ui.messageText.setText("You enter the cave. What is waiting for you inside...");
 		
 		gm.stopMusic(gm.currentMusic);
@@ -68,13 +71,9 @@ public class SceneChanger {
 		gm.ui.bgPanel[6].setVisible(false);
 		gm.ui.bgPanel[7].setVisible(false);
 		gm.ui.bgPanel[8].setVisible(false);
+		gm.ui.bgPanel[9].setVisible(false);
 		
-		if (gm.player.talkOrScare==0) {
-			gm.ui.messageText.setText("The dog is not very friendly. Prepare for battle!");
-		}
-		else {
-			gm.ui.messageText.setText("The dog wasn't scared, but you started to feel a warmth in your pants.");
-		}
+		gm.ui.messageText.setText("The dog wasn't scared, but you started to feel a warmth in your pants.");
 		
 		gm.stopMusic(gm.currentMusic);
 		gm.currentMusic = gm.ashesOfWar;
@@ -90,11 +89,21 @@ public class SceneChanger {
 		gm.ui.bgPanel[6].setVisible(true);
 		gm.ui.bgPanel[7].setVisible(false);
 		gm.ui.bgPanel[8].setVisible(false);
+		gm.ui.bgPanel[9].setVisible(false);
 		gm.ui.messageText.setText("You enter the Tavern");
+	}
+	public void showScreen9() {
 		
-		gm.stopMusic(gm.currentMusic);
-		gm.currentMusic = gm.bossMusic;
-		gm.playMusic(gm.currentMusic);
+		gm.ui.bgPanel[1].setVisible(false);
+		gm.ui.bgPanel[2].setVisible(false);
+		gm.ui.bgPanel[3].setVisible(false);
+		gm.ui.bgPanel[4].setVisible(false);
+		gm.ui.bgPanel[5].setVisible(false);
+		gm.ui.bgPanel[6].setVisible(false);
+		gm.ui.bgPanel[7].setVisible(false);
+		gm.ui.bgPanel[8].setVisible(false);
+		gm.ui.bgPanel[9].setVisible(true);
+		gm.ui.messageText.setText("The bar part is here.");
 	}
 	public void showGameOverScreen(int currentBgNum) {
 		
@@ -118,6 +127,7 @@ public class SceneChanger {
 		gm.ui.bgPanel[6].setVisible(false);
 		gm.ui.bgPanel[7].setVisible(false);
 		gm.ui.bgPanel[8].setVisible(true);
+		gm.ui.bgPanel[9].setVisible(false);
 		
 		gm.ui.restartButton.setVisible(true);
 		gm.ui.restartButton.setText("Click here to Restart");
@@ -135,6 +145,7 @@ public class SceneChanger {
 		gm.ui.bgPanel[6].setVisible(false);
 		gm.ui.bgPanel[7].setVisible(false);
 		gm.ui.bgPanel[8].setVisible(false);
+		gm.ui.bgPanel[9].setVisible(false);
 		
 		gm.ui.restartButton.setVisible(true);
 		gm.ui.restartButton.setText("Click here to Restart");
@@ -153,6 +164,7 @@ public class SceneChanger {
 		gm.ui.bgPanel[6].setVisible(false);
 		gm.ui.bgPanel[7].setVisible(true);
 		gm.ui.bgPanel[8].setVisible(false);
+		gm.ui.bgPanel[9].setVisible(false);
 		
 		gm.ui.restartButton.setVisible(true);
 		gm.ui.restartButton.setText("Click here to Restart");

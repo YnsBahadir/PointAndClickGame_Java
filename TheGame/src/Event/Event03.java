@@ -22,7 +22,6 @@ public class Event03 {
 		}
 		public void attackWolf() {
 			
-			gm.player.talkOrScare++;
 			gm.sChanger.showScreen4();
 		}
 }
