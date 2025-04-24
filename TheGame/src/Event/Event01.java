@@ -120,7 +120,7 @@ public class Event01 {
 				gm.playSE(gm.hurtSound);
 				}
 				else if(gm.player.playerLife==1) {
-					gm.ui.messageText.setText("Guard: What a fool one...");
+					gm.ui.messageText.setText("Our hero's final act of stupidity was to go face to face with a fully equipped knight.");
 					gm.player.playerLife--;
 					gm.playSE(gm.hurtSound);
 					gm.sChanger.showGameOverScreen(1);
@@ -152,7 +152,30 @@ public class Event01 {
 		gm.ui.messageText.setText("This chest look like from another dimension.");
 	}
 	public void talkChest() {
-		gm.ui.messageText.setText("*Some Chest Sounds...*");
+		String[] chestMessages = {
+			    "*Some Chest Sounds...*",
+			    "*Some More Chest Sounds...*",
+			    "*Some More More Chest Sounds...*",
+			    "*Some More More More Chest Sounds...*",
+			    "*Some More More More More Chest Sounds...*",
+			    "*Some More More More More More Chest Sounds...*",
+			    "*Some More More More More More More Chest Sounds...*"
+			};
+
+			if (gm.player.chestCounter < chestMessages.length) {
+			    gm.ui.messageText.setText(chestMessages[gm.player.chestCounter]);
+			    gm.player.chestCounter++;
+			    gm.player.updatePlayerStatus();
+			}
+			else {
+				gm.ui.messageText.setText("You realize this chest is actualy a mimic!\nBecause he enjoyed your talk so much, it gave you enough money to buy a Kingdom.");
+				gm.sChanger.showMimicEnding();
+				
+				gm.stopMusic(gm.currentMusic);
+				gm.currentMusic = gm.money;
+				gm.playMusic(gm.currentMusic);
+			}
+
 	}
 	public void openChest() {
 		if(gm.player.hasSword==0) {

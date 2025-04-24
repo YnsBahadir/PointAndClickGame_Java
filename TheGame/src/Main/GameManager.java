@@ -12,6 +12,7 @@ import Event.Event01;
 import Event.Event02;
 import Event.Event03;
 import Event.Event04;
+import Event.Event06;
 
 public class GameManager {
 
@@ -27,6 +28,7 @@ public class GameManager {
 	public Event02 ev2 = new Event02(this);
 	public Event03 ev3 = new Event03(this);
 	public Event04 ev4 = new Event04(this);
+	public Event06 ev6 = new Event06(this);
 	
 //	Sounds
 	public URL ashesOfWar = getClass().getClassLoader().getResource("audio//AshesOfWar2.wav");
@@ -38,6 +40,7 @@ public class GameManager {
 	public URL fieldMusic = getClass().getClassLoader().getResource("audio//medAbbey.wav");
 	public URL guardLeave = getClass().getClassLoader().getResource("audio//LeaveMePunch.wav");
 	public URL chestSound = getClass().getClassLoader().getResource("audio//MinecraftChest.wav");
+	public URL money = getClass().getClassLoader().getResource("audio//money.wav");
 	public URL guardLook = getClass().getClassLoader().getResource("audio//needSomething.wav");
 	public URL guardPunch = getClass().getClassLoader().getResource("audio//punchGame.wav");
 	public URL questComplete = getClass().getClassLoader().getResource("audio//questComplete.wav");

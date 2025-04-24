@@ -37,12 +37,23 @@ public class Event04 {
 	}
 	public void attackMoon() {
 		if((gm.player.hasSword==1)&&(gm.player.hasShield==1)) {
-			gm.ui.messageText.setText("Your attack was very effective..");
-			gm.sChanger.wolfDefeatScreen(4);
+			gm.ui.messageText.setText("Thanks to your difficult journey all the way here (attacking the Knight from behind), you saved the village!");
+			gm.sChanger.wolfDefeatEnding(4);
 		}
 		else if((gm.player.hasSword==1)&&(gm.player.hasShield==0)) {
-			gm.ui.messageText.setText("You defeated the monster, It cost your life but it's worth now the village is safe.\nRest in Peace");
-			gm.sChanger.showEndingEgual();
+			if(gm.player.playerLife==1) {
+				gm.stopMusic(gm.currentMusic);
+				gm.currentMusic = gm.heroAndDogDeath;
+				gm.playMusic(gm.currentMusic);
+				gm.ui.messageText.setText("You defeated the monster, It cost your life but it's worth now the village is safe.\nRest in Peace");
+				gm.sChanger.showEndingEgual();
+			}
+			else {
+				gm.player.playerLife--;
+				gm.player.updatePlayerStatus();
+				gm.playSE(gm.wolfSound);
+				gm.ui.messageText.setText("You deal damage to your opponent in exchange for taking damage!");
+			}
 		}
 		else if(gm.player.hasSword==0) {
 			gm.ui.messageText.setText("You have no weapons to attack with!");

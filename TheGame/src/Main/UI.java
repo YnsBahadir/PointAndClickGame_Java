@@ -6,6 +6,7 @@ import java.awt.GridLayout;
 import java.awt.event.MouseEvent;
 import java.awt.event.MouseListener;
 
+import javax.swing.BorderFactory;
 import javax.swing.ImageIcon;
 import javax.swing.JButton;
 import javax.swing.JFrame;
@@ -217,9 +218,9 @@ public class UI {
 		
 		restartButton = new JButton();
 		restartButton.setBounds(340, 320, 120, 50);
-		restartButton.setBorder(null);
-		restartButton.setBackground(null);
-		restartButton.setForeground(Color.white);
+		restartButton.setBorder(BorderFactory.createLineBorder(new Color(120, 120, 120), 3));
+		restartButton.setBackground(Color.white);
+		restartButton.setForeground(Color.black);
 		restartButton.setFocusPainted(false);
 		restartButton.addActionListener(gm.aHandler);
 		restartButton.setActionCommand("restart");
@@ -254,15 +255,26 @@ public class UI {
 		createObject(4, 170,50,355,315, "Moonless360x315.png", "Run","Block", "Attack", "runMoon", "blockMoon", "attackMoon");
 		bgPanel[4].add(bgLabel[4]);
 		
+		//Scene 6
+		createBackground(6, "taverna700x350.png");
+		createArrowButton(6, 320, 300, 50, 60, "downArrow50x60.png", "goScene1");
+		createObject(6, 320,150,185,125, "liarTable185x125.png", "Look", "Talk", "Join", "lookTable", "talkTable", "joinTable");
+		createObject(6, 135,170,91,180, "fearGirl91x180.png", "Look", "Talk", "Gift", "lookGirl", "talkGirl", "giftGirl");
+		bgPanel[6].add(bgLabel[6]);
+		
 		//Ending 5
 		createBackground(5, "heroDeath350x350.jpg");
 		bgLabel[5].setBounds(175, 0, 350, 350);
 		bgPanel[5].add(bgLabel[5]);
 		
-		//Scene 6
-		createBackground(6, "taverna700x350.png");
-		createArrowButton(6, 320, 300, 50, 60, "downArrow50x60.png", "goScene1");
-		bgPanel[6].add(bgLabel[6]);
+		//Ending 7
+		createBackground(7, "mimic465x360.jpg");
+		bgLabel[7].setBounds(120, 0, 465, 360);
+		bgPanel[7].add(bgLabel[7]);
+		
+		createBackground(8, "ending526x350.jpg");
+		bgLabel[8].setBounds(120, 0, 465, 360);
+		bgPanel[8].add(bgLabel[8]);
 	}
 }
 

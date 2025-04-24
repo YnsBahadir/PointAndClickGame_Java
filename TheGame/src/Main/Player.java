@@ -8,6 +8,7 @@ public class Player {
 	public int knightCounter;
 	public int knighttalkCounter;
 	public int talkOrScare;
+	public int chestCounter;
 	
 	public int playerMaxLife;
 	public int playerLife;
@@ -32,6 +33,7 @@ public class Player {
 		lifeCounter = 0;
 		knightCounter = 0;
 		knighttalkCounter = 0;
+		chestCounter = 0;
 		
 		talkOrScare = 0;
 		

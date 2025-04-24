@@ -52,6 +52,15 @@ public class ActionHandler implements ActionListener {
 			case "blockMoon": gm.ev4.blockMoon(); break;
 			case "attackMoon": gm.ev4.attackMoon(); break;
 			
+//			ENG/Scene 6 Intreactions - TR/Sahne 6 etkileşimleri
+			case "lookTable": gm.ev6.lookTable(); break;
+			case "talkTable": gm.ev6.talkTable(); break;
+			case "joinTable": gm.ev6.joinTable(); break;
+			
+			case "lookGirl": gm.ev6.lookGirl(); break;
+			case "talkGirl": gm.ev6.talkGirl(); break;
+			case "giftGirl": gm.ev6.giftGirl(); break;
+			
 //			ENG/Change Scene - TR/Sahne Değiştirme
 			case "goScene1": gm.sChanger.showScreen1(); break;
 			case "goScene2": gm.sChanger.showScreen2(); break;

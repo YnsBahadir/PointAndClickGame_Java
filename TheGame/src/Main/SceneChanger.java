@@ -16,6 +16,8 @@ public class SceneChanger {
 		gm.ui.bgPanel[4].setVisible(false);
 		gm.ui.bgPanel[5].setVisible(false);
 		gm.ui.bgPanel[6].setVisible(false);
+		gm.ui.bgPanel[7].setVisible(false);
+		gm.ui.bgPanel[8].setVisible(false);
 		gm.ui.messageText.setText("Let's go to Adventure!!");
 		
 		gm.stopMusic(gm.currentMusic);
@@ -30,6 +32,8 @@ public class SceneChanger {
 		gm.ui.bgPanel[4].setVisible(false);
 		gm.ui.bgPanel[5].setVisible(false);
 		gm.ui.bgPanel[6].setVisible(false);
+		gm.ui.bgPanel[7].setVisible(false);
+		gm.ui.bgPanel[8].setVisible(false);
 		gm.ui.messageText.setText("");
 		
 		if(gm.currentMusic == gm.bossMusic) {
@@ -46,6 +50,8 @@ public class SceneChanger {
 		gm.ui.bgPanel[4].setVisible(false);
 		gm.ui.bgPanel[5].setVisible(false);
 		gm.ui.bgPanel[6].setVisible(false);
+		gm.ui.bgPanel[7].setVisible(false);
+		gm.ui.bgPanel[8].setVisible(false);
 		gm.ui.messageText.setText("You enter the cave. What is waiting for you inside...");
 		
 		gm.stopMusic(gm.currentMusic);
@@ -60,6 +66,8 @@ public class SceneChanger {
 		gm.ui.bgPanel[4].setVisible(true);
 		gm.ui.bgPanel[5].setVisible(false);
 		gm.ui.bgPanel[6].setVisible(false);
+		gm.ui.bgPanel[7].setVisible(false);
+		gm.ui.bgPanel[8].setVisible(false);
 		
 		if (gm.player.talkOrScare==0) {
 			gm.ui.messageText.setText("The dog is not very friendly. Prepare for battle!");
@@ -80,7 +88,9 @@ public class SceneChanger {
 		gm.ui.bgPanel[4].setVisible(false);
 		gm.ui.bgPanel[5].setVisible(false);
 		gm.ui.bgPanel[6].setVisible(true);
-		gm.ui.messageText.setText("You enter the cave. What is waiting for you inside...");
+		gm.ui.bgPanel[7].setVisible(false);
+		gm.ui.bgPanel[8].setVisible(false);
+		gm.ui.messageText.setText("You enter the Tavern");
 		
 		gm.stopMusic(gm.currentMusic);
 		gm.currentMusic = gm.bossMusic;
@@ -97,18 +107,24 @@ public class SceneChanger {
 		gm.stopMusic(gm.currentMusic);
 		gm.playSE(gm.gameOver);
 	}
-	public void wolfDefeatScreen(int currentBgNum) {
+	
+	public void wolfDefeatEnding(int currentBgNum) {
 		
-		gm.ui.bgPanel[currentBgNum].setVisible(false);
-		gm.ui.titleLabel.setVisible(true);
-		gm.ui.titleLabel.setText("Congralations You Saved the Village!");
+		gm.ui.bgPanel[1].setVisible(false);
+		gm.ui.bgPanel[2].setVisible(false);
+		gm.ui.bgPanel[3].setVisible(false);
+		gm.ui.bgPanel[4].setVisible(false);
+		gm.ui.bgPanel[5].setVisible(false);
+		gm.ui.bgPanel[6].setVisible(false);
+		gm.ui.bgPanel[7].setVisible(false);
+		gm.ui.bgPanel[8].setVisible(true);
+		
 		gm.ui.restartButton.setVisible(true);
 		gm.ui.restartButton.setText("Click here to Restart");
 		
 		gm.stopMusic(gm.currentMusic);
 		gm.playSE(gm.questComplete);
 	}
-	
 	public void showEndingEgual() {
 		
 		gm.ui.bgPanel[1].setVisible(false);
@@ -117,6 +133,8 @@ public class SceneChanger {
 		gm.ui.bgPanel[4].setVisible(false);
 		gm.ui.bgPanel[5].setVisible(true);
 		gm.ui.bgPanel[6].setVisible(false);
+		gm.ui.bgPanel[7].setVisible(false);
+		gm.ui.bgPanel[8].setVisible(false);
 		
 		gm.ui.restartButton.setVisible(true);
 		gm.ui.restartButton.setText("Click here to Restart");
@@ -125,7 +143,23 @@ public class SceneChanger {
 		gm.currentMusic = gm.heroAndDogDeath;
 		gm.playMusic(gm.currentMusic);
 	}
-
+	public void showMimicEnding() {
+		
+		gm.ui.bgPanel[1].setVisible(false);
+		gm.ui.bgPanel[2].setVisible(false);
+		gm.ui.bgPanel[3].setVisible(false);
+		gm.ui.bgPanel[4].setVisible(false);
+		gm.ui.bgPanel[5].setVisible(false);
+		gm.ui.bgPanel[6].setVisible(false);
+		gm.ui.bgPanel[7].setVisible(true);
+		gm.ui.bgPanel[8].setVisible(false);
+		
+		gm.ui.restartButton.setVisible(true);
+		gm.ui.restartButton.setText("Click here to Restart");
+		
+		gm.stopMusic(gm.currentMusic);
+		gm.playSE(gm.money);
+	}
 	public void exitGameOverScreen() {
 		
 		gm.ui.titleLabel.setVisible(false);
