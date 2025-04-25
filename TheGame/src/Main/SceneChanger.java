@@ -90,7 +90,7 @@ public class SceneChanger {
 		gm.ui.bgPanel[7].setVisible(false);
 		gm.ui.bgPanel[8].setVisible(false);
 		gm.ui.bgPanel[9].setVisible(false);
-		gm.ui.messageText.setText("You enter the Tavern");
+		gm.ui.messageText.setText("Main Tavern");
 	}
 	public void showScreen9() {
 		
@@ -103,7 +103,7 @@ public class SceneChanger {
 		gm.ui.bgPanel[7].setVisible(false);
 		gm.ui.bgPanel[8].setVisible(false);
 		gm.ui.bgPanel[9].setVisible(true);
-		gm.ui.messageText.setText("The bar part is here.");
+		gm.ui.messageText.setText("The Bar.");
 	}
 	public void showGameOverScreen(int currentBgNum) {
 		

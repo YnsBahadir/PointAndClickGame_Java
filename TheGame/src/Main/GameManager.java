@@ -13,6 +13,7 @@ import Event.Event02;
 import Event.Event03;
 import Event.Event04;
 import Event.Event06;
+import Event.Event09;
 
 public class GameManager {
 
@@ -29,6 +30,7 @@ public class GameManager {
 	public Event03 ev3 = new Event03(this);
 	public Event04 ev4 = new Event04(this);
 	public Event06 ev6 = new Event06(this);
+	public Event09 ev9 = new Event09(this);
 	
 //	Sounds
 	public URL ashesOfWar = getClass().getClassLoader().getResource("audio//AshesOfWar2.wav");

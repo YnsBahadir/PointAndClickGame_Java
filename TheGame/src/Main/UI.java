@@ -33,7 +33,7 @@ public class UI {
 	JPanel lifePanel;
 	JLabel lifeLabel[] = new JLabel[6];
 	JPanel inventoryPanel;
-	public JLabel swordLabel, shieldLabel, lanternLabel, meatLabel, wolfLabel;
+	public JLabel swordLabel, shieldLabel, lanternLabel, meatLabel, wolfLabel, cardLabel;
 	
 	
 //	GAME OVER UI
@@ -185,7 +185,7 @@ public class UI {
 		}
 		
 		inventoryPanel = new JPanel();
-		inventoryPanel.setBounds(580, 0, 175, 50);
+		inventoryPanel.setBounds(545, 0, 210, 50);
 		inventoryPanel.setBackground(Color.black);
 		inventoryPanel.setLayout(new GridLayout(1,5));
 		window.add(inventoryPanel);
@@ -215,6 +215,11 @@ public class UI {
 		ImageIcon wolfIcon = new ImageIcon(getClass().getClassLoader().getResource("wolfLove35x35.png"));
 		wolfLabel.setIcon(wolfIcon);
 		inventoryPanel.add(wolfLabel);
+		
+		cardLabel = new JLabel();
+		ImageIcon cardIcon = new ImageIcon(getClass().getClassLoader().getResource("card35x35.png"));
+		cardLabel.setIcon(cardIcon);
+		inventoryPanel.add(cardLabel);
 	}
 	
 	public void createGameOverField() {
@@ -276,6 +281,7 @@ public class UI {
 		//Scene 9
 		createBackground(9, "tavernBar700x350.jpg");
 		createArrowButton(9, 0, 150, 50, 50, "leftArrow60x50HandMade.png", "goScene6");
+		createObject(9, 250,95,140,120, "bartender213x120.png", "Look","Talk", "Buy", "lookBart", "talkBart", "buyBart");
 		bgPanel[9].add(bgLabel[9]);
 		
 		//Ending 5

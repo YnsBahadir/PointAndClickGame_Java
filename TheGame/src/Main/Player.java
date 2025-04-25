@@ -8,6 +8,8 @@ public class Player {
 	public int knightCounter;
 	public int knighttalkCounter;
 	public int chestCounter;
+	public int bartCounter;
+	public int bartCounterBuy;
 	
 	public int playerMaxLife;
 	public int playerLife;
@@ -17,6 +19,7 @@ public class Player {
 	public int hasLantern;
 	public int hasMeat;
 	public int hasWolf;
+	public int hasCard;
 	
 	public Player(GameManager gm) {
 		this.gm = gm;
@@ -27,16 +30,20 @@ public class Player {
 //		Bu kısım ne zaman karakterin statlarını sıfırlamak istersem kullanmam için.
 		playerMaxLife = 5;
 		playerLife = 3;
+		
 		hasSword = 0;
 		hasShield = 0;
 		hasLantern = 0;
 		hasMeat = 0;
 		hasWolf = 0;
+		hasCard = 0;
 		
 		lifeCounter = 0;
 		knightCounter = 0;
 		knighttalkCounter = 0;
 		chestCounter = 0;
+		bartCounter = 0;
+		bartCounterBuy = 0;
 		
 		
 		updatePlayerStatus();
@@ -95,6 +102,14 @@ public class Player {
 		}
 		if(hasWolf==1) {
 			gm.ui.wolfLabel.setVisible(true);
+		}
+		
+		
+		if(hasCard==0) {
+			gm.ui.cardLabel.setVisible(false);
+		}
+		if(hasCard==1) {
+			gm.ui.cardLabel.setVisible(true);
 		}
 	}
 	

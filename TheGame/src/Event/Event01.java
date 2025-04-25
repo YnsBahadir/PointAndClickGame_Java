@@ -179,13 +179,20 @@ public class Event01 {
 	}
 	public void openChest() {
 		if(gm.player.hasSword==0) {
-			gm.ui.messageText.setText("You found a Sword*.");
+			gm.ui.messageText.setText("You found a Sword*");
 			gm.player.hasSword=1;
 			gm.player.updatePlayerStatus();
 			
 			gm.playSE(gm.chestSound);
 		}
-		else {
+		else if(gm.player.hasSword==1) {
+			gm.ui.messageText.setText("You found a Card*\n(It has Myass's name on it.)");
+			gm.player.hasCard=1;
+			gm.player.updatePlayerStatus();
+			
+			gm.playSE(gm.chestSound);
+		}
+		else if((gm.player.hasSword==1)&&(gm.player.hasCard==1)){
 			gm.ui.messageText.setText("There's nothing left inside in it.");
 			
 			gm.playSE(gm.chestSound);
