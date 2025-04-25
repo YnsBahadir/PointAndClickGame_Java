@@ -28,13 +28,35 @@ public class Event06 {
 			gm.ui.messageText.setText("A sad little girl is looking towards you.");
 		}
 		public void talkGirl() {
-			
-			gm.ui.messageText.setText("Little Girl: Have you seen my doggie?");
+			if(gm.player.littleGirlCount==0) {
+				gm.ui.messageText.setText("Little Girl: Excuse me sir.");
+				gm.player.littleGirlCount++;
+				gm.player.updatePlayerStatus();
+			}
+			else if(gm.player.littleGirlCount==1) {
+				gm.ui.messageText.setText("Little Girl: Have you seen my doggie?");
+				gm.player.littleGirlCount++;
+				gm.player.updatePlayerStatus();
+			}
+			else if(gm.player.littleGirlCount==2) {
+				gm.ui.messageText.setText("Little Girl: She must be hiding somewhere, hungry and scared.");
+				gm.player.littleGirlCount++;
+				gm.player.updatePlayerStatus();
+			}
+			else if(gm.player.littleGirlCount==3) {
+				gm.ui.messageText.setText("Little Girl: If you see her, can you let me know?");
+				gm.player.littleGirlCount++;
+				gm.player.updatePlayerStatus();
+			}
+			else if(gm.player.littleGirlCount==4) {
+				gm.ui.messageText.setText("More crying girl sounds*");
+			}
 		}
 		public void giftGirl() {
 			
 			if(gm.player.hasWolf==1) {
 				gm.sChanger.showTrueEnding(11);
+				gm.ui.messageText.setText("Congratulations!\nYou reached the true ending of the game by bringing the monster to the little girl.!\nBaraya: I hope you enjoyed the game :3");
 			}
 			else {
 				gm.ui.messageText.setText("You don't have any gift to give the little girl.");

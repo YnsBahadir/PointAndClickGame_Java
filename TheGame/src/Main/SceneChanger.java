@@ -229,7 +229,8 @@ public class SceneChanger {
 		gm.ui.restartButton.setText("Click here to Restart");
 		
 		gm.stopMusic(gm.currentMusic);
-		gm.playSE(gm.questComplete);
+		gm.currentMusic = gm.trueEndSound;
+		gm.playMusic(gm.currentMusic);
 	}
 	public void exitGameOverScreen() {
 		

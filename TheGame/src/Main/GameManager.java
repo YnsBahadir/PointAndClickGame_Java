@@ -46,6 +46,7 @@ public class GameManager {
 	public URL guardLook = getClass().getClassLoader().getResource("audio//needSomething.wav");
 	public URL guardPunch = getClass().getClassLoader().getResource("audio//punchGame.wav");
 	public URL questComplete = getClass().getClassLoader().getResource("audio//questComplete.wav");
+	public URL trueEndSound = getClass().getClassLoader().getResource("audio//seeYou.wav");
 	public URL healSound = getClass().getClassLoader().getResource("audio//SnoreCut.wav");
 	public URL hurtSound = getClass().getClassLoader().getResource("audio//steveHurt.wav");
 	public URL tavern1 = getClass().getClassLoader().getResource("audio//tavern1.wav");
@@ -92,15 +93,3 @@ public class GameManager {
 		music.stop(url);
 	}
 }
-
-
-
-
-
-
-
-
-
-
-
-

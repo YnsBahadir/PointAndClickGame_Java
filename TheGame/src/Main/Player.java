@@ -10,6 +10,7 @@ public class Player {
 	public int chestCounter;
 	public int bartCounter;
 	public int bartCounterBuy;
+	public int littleGirlCount;
 	
 	public int playerMaxLife;
 	public int playerLife;
@@ -44,6 +45,7 @@ public class Player {
 		chestCounter = 0;
 		bartCounter = 0;
 		bartCounterBuy = 0;
+		littleGirlCount = 0;
 		
 		
 		updatePlayerStatus();

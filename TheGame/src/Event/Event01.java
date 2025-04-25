@@ -16,7 +16,7 @@ public class Event01 {
 	
 //	ENG/Hut Interactions - TR/Kulübe Etkileşimleri
 	public void lookHut() {
-		gm.ui.messageText.setText("This Hut should be Local Tavern. If I have enough coin, I can rest here.");
+		gm.ui.messageText.setText("This Hut should be Local Tavern. I'm lucky they provide free accommodation to the heroes.");
 	}
 	public void enterHut() {
 		gm.sChanger.showScreen6();
@@ -43,13 +43,13 @@ public class Event01 {
 			
 			gm.playSE(gm.healSound);
 		}
-		else if(gm.player.lifeCounter==6) {
-			gm.ui.messageText.setText("Creater: You're a lazy one, huh?");
+		else if(gm.player.lifeCounter==4) {
+			gm.ui.messageText.setText("Baraya: You're a lazy one, huh?");
 			gm.player.lifeCounter++;
 			gm.player.updatePlayerStatus();
 		}
-		else if(gm.player.lifeCounter==7) {
-			gm.ui.messageText.setText("Creater: Can't you do something heroic?");
+		else if(gm.player.lifeCounter==5) {
+			gm.ui.messageText.setText("Baraya: Can't you do something heroic?");
 		}
 		else {
 			gm.ui.messageText.setText("Your Life is full.");
@@ -108,6 +108,11 @@ public class Event01 {
 		else if ((gm.player.hasSword==1)&&(gm.player.knighttalkCounter>=3)) {
 			gm.ui.messageText.setText("Guard: Now go and save the village!");
 			
+			gm.playSE(villagerSounds[index]);
+		}
+		
+		if(gm.player.hasWolf==1) {
+			gm.ui.messageText.setText("I see you've tamed the beast. Great achievement.");
 			gm.playSE(villagerSounds[index]);
 		}
 	}

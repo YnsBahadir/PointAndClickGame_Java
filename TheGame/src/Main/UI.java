@@ -308,10 +308,3 @@ public class UI {
 		bgPanel[11].add(bgLabel[11]);
 	}
 }
-
-
-
-
-
-
-
