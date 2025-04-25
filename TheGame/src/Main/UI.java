@@ -267,7 +267,7 @@ public class UI {
 		
 		//Scene 4 ↸𝙹リℸ ̣ ∷⚍ リ
 		createBackground(4, "Cave700x350.jpg");
-		createObject(4, 170,50,355,315, "Moonless360x315.png", "Run","Block", "Attack", "runMoon", "blockMoon", "attackMoon");
+		createObject(4, 170,50,355,315, "Moonless360x315.png", "Run","Distract", "Attack", "runMoon", "blockMoon", "attackMoon");
 		bgPanel[4].add(bgLabel[4]);
 		
 		//Scene 6
@@ -284,6 +284,11 @@ public class UI {
 		createObject(9, 250,95,140,120, "bartender213x120.png", "Look","Talk", "Buy", "lookBart", "talkBart", "buyBart");
 		bgPanel[9].add(bgLabel[9]);
 		
+		//Scene 10
+		createBackground(10, "Cave700x350.jpg");
+		createArrowButton(10, 650, 150, 50, 50, "rightArrow60x50HandMade.png", "goScene2");
+		bgPanel[10].add(bgLabel[10]);
+		
 		//Ending 5
 		createBackground(5, "heroDeath350x350.jpg");
 		bgLabel[5].setBounds(175, 0, 350, 350);
@@ -297,6 +302,10 @@ public class UI {
 		createBackground(8, "ending526x350.jpg");
 		bgLabel[8].setBounds(120, 0, 465, 360);
 		bgPanel[8].add(bgLabel[8]);
+		
+		createBackground(11, "trueEnding440x350.jpg");
+		bgLabel[11].setBounds(120, 0, 440, 350);
+		bgPanel[11].add(bgLabel[11]);
 	}
 }
 

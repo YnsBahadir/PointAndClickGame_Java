@@ -18,11 +18,17 @@ public class Event02 {
 		gm.ui.messageText.setText("You hear the echo of your voice.");
 	}
 	public void enterCave() {
-		if(gm.player.hasLantern==0) {
-			gm.ui.messageText.setText("It's too dark to enter.");
+		if(gm.player.hasWolf==1) {
+			gm.sChanger.showScreen10();
+			gm.ui.messageText.setText("There is nothing left to do here.");
 		}
 		else {
-			gm.sChanger.showScreen3();
+			if(gm.player.hasLantern==0) {
+				gm.ui.messageText.setText("It's too dark to enter.");
+			}
+			else {
+				gm.sChanger.showScreen3();
+			}
 		}
 	}
 	

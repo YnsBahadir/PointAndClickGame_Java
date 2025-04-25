@@ -17,11 +17,13 @@ public class Event03 {
 			gm.playSE(gm.dogSound);
 		}
 		public void talkWolf() {
-
+			
+			gm.ui.messageText.setText("You're thinking, \"This dog's talk is killing.\"");
 			gm.sChanger.showScreen4();
 		}
 		public void attackWolf() {
 			
+			gm.ui.messageText.setText("The dog wasn't scared, but you started to feel a warmth in your pants.");
 			gm.sChanger.showScreen4();
 		}
 }

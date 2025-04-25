@@ -32,7 +32,12 @@ public class Event06 {
 			gm.ui.messageText.setText("Little Girl: Have you seen my doggie?");
 		}
 		public void giftGirl() {
-	
-			gm.ui.messageText.setText("Yippie!");
+			
+			if(gm.player.hasWolf==1) {
+				gm.sChanger.showTrueEnding(11);
+			}
+			else {
+				gm.ui.messageText.setText("You don't have any gift to give the little girl.");
+			}
 		}
 }

@@ -11,28 +11,26 @@ public class Event04 {
 	this.gm = gm;
 	}
 	public void runMoon() {
-		
-		gm.ui.messageText.setText("Running away is not an option!");
+		if((gm.player.hasSword==0)&&(gm.player.hasMeat==0)) {
+			gm.ui.messageText.setText("By the time hero realized that facing the monster barehanded was a mistake, it was too late.");
+			gm.sChanger.showGameOverScreen(4);
+		}
+		else {
+			gm.ui.messageText.setText("Running away is not an option!");
+		}
 	}
 	public void blockMoon() {
 		
-		if(gm.player.hasShield==0) {
-			if((gm.player.playerLife==1)||(gm.player.playerLife==2)) {
-				gm.ui.messageText.setText("By the time our hero realized that his royal cotton suit was useless against the enemy, it was too late.");
-				gm.player.playerLife-=2;
-				gm.playSE(gm.hurtSound);
-				gm.sChanger.showGameOverScreen(4);
-			}
-			else {
-			gm.ui.messageText.setText("You took the damage directly.\n(Your life point decreases two.)");
-			gm.playSE(gm.wolfSound);
-			gm.player.playerLife -= 2;
-			gm.player.updatePlayerStatus();
-			}
+		if(gm.player.hasMeat==0) {
+			gm.ui.messageText.setText("You have nothing to distract the monster. ");
 		}
 		else {
-			gm.playSE(gm.wolfSound);
-			gm.ui.messageText.setText("You successfully blocked the monster's attack.");
+			gm.ui.messageText.setText("You realized that the monster was very friendly for some reason when you gave her food to distract her.\nThe monster started chasing you*");
+			gm.player.hasWolf = 1;
+			gm.player.hasMeat = 0;
+			gm.player.updatePlayerStatus();
+			
+			gm.sChanger.showScreen10();
 		}
 	}
 	public void attackMoon() {
