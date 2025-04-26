@@ -65,4 +65,20 @@ public class Event09 {
 			}
 		}
 	}
+	public void lookSteve() {
+		if(gm.player.steveCounter==1) {
+			gm.ui.messageText.setText("A strange man is standing next to the bar.\nYou think his name is steve.");
+		}
+		else {
+			gm.ui.messageText.setText("A strange man is standing next to the bar.");
+		}
+	}
+	public void talkSteve() {
+		gm.ui.messageText.setText("When you try to talk the only response you get is:\nI.. Am... STEVE...");
+		
+		gm.playSE(gm.iAmSteve);
+		
+		gm.player.steveCounter = 1;
+		gm.player.updatePlayerStatus();
+	}
 }

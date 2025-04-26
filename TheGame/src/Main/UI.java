@@ -71,7 +71,6 @@ public class UI {
 		messageText.setWrapStyleWord(true);
 		messageText.setFont(new Font("Book Antiqua", Font.PLAIN, 26));
 		window.add(messageText);
-		
 	}
 	public void createBackground(int bgNum, String bgFileName) {
 		bgPanel[bgNum] = new JPanel();
@@ -282,6 +281,7 @@ public class UI {
 		createBackground(9, "tavernBar700x350.jpg");
 		createArrowButton(9, 0, 150, 50, 50, "leftArrow60x50HandMade.png", "goScene6");
 		createObject(9, 250,95,140,120, "bartender213x120.png", "Look","Talk", "Buy", "lookBart", "talkBart", "buyBart");
+		createObject(9, 480,120,88,220, "steve88x220.png", "Look", "Talk", "", "lookSteve", "talkSteve", "");
 		bgPanel[9].add(bgLabel[9]);
 		
 		//Scene 10
@@ -306,5 +306,9 @@ public class UI {
 		createBackground(11, "trueEnding440x350.jpg");
 		bgLabel[11].setBounds(120, 0, 440, 350);
 		bgPanel[11].add(bgLabel[11]);
+		
+		createBackground(12, "liarEnd623x350.jpg");
+		bgLabel[12].setBounds(39, 0, 623, 350);
+		bgPanel[12].add(bgLabel[12]);
 	}
 }

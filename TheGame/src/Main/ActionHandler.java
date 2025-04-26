@@ -61,10 +61,13 @@ public class ActionHandler implements ActionListener {
 			case "talkGirl": gm.ev6.talkGirl(); break;
 			case "giftGirl": gm.ev6.giftGirl(); break;
 			
-//			ENG/Scene 6 Intreactions - TR/Sahne 6 etkileşimleri
+//			ENG/Scene 9 Intreactions - TR/Sahne 9 etkileşimleri
 			case "lookBart": gm.ev9.lookBart(); break;
 			case "talkBart": gm.ev9.talkBart(); break;
 			case "buyBart": gm.ev9.buyBart(); break;
+			
+			case "lookSteve": gm.ev9.lookSteve(); break;
+			case "talkSteve": gm.ev9.talkSteve(); break;
 			
 //			ENG/Change Scene - TR/Sahne Değiştirme
 			case "goScene1": gm.sChanger.showScreen1(); break;

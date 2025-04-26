@@ -21,6 +21,7 @@ public class SceneChanger {
 		gm.ui.bgPanel[9].setVisible(false);
 		gm.ui.bgPanel[10].setVisible(false);
 		gm.ui.bgPanel[11].setVisible(false);
+		gm.ui.bgPanel[12].setVisible(false);
 		gm.ui.messageText.setText("Let's go to Adventure!!");
 		
 		if(gm.currentMusic == gm.fieldMusic) {
@@ -45,6 +46,7 @@ public class SceneChanger {
 		gm.ui.bgPanel[9].setVisible(false);
 		gm.ui.bgPanel[10].setVisible(false);
 		gm.ui.bgPanel[11].setVisible(false);
+		gm.ui.bgPanel[12].setVisible(false);
 		gm.ui.messageText.setText("");
 		
 		if(gm.currentMusic == gm.bossMusic) {
@@ -66,6 +68,7 @@ public class SceneChanger {
 		gm.ui.bgPanel[9].setVisible(false);
 		gm.ui.bgPanel[10].setVisible(false);
 		gm.ui.bgPanel[11].setVisible(false);
+		gm.ui.bgPanel[12].setVisible(false);
 		gm.ui.messageText.setText("You enter the cave. What is waiting for you inside...");
 		
 		gm.stopMusic(gm.currentMusic);
@@ -85,6 +88,7 @@ public class SceneChanger {
 		gm.ui.bgPanel[9].setVisible(false);
 		gm.ui.bgPanel[10].setVisible(false);
 		gm.ui.bgPanel[11].setVisible(false);
+		gm.ui.bgPanel[12].setVisible(false);
 		
 		gm.stopMusic(gm.currentMusic);
 		gm.currentMusic = gm.ashesOfWar;
@@ -103,6 +107,7 @@ public class SceneChanger {
 		gm.ui.bgPanel[9].setVisible(false);
 		gm.ui.bgPanel[10].setVisible(false);
 		gm.ui.bgPanel[11].setVisible(false);
+		gm.ui.bgPanel[12].setVisible(false);
 		gm.ui.messageText.setText("Main Tavern");
 	}
 	public void showScreen9() {
@@ -118,6 +123,7 @@ public class SceneChanger {
 		gm.ui.bgPanel[9].setVisible(true);
 		gm.ui.bgPanel[10].setVisible(false);
 		gm.ui.bgPanel[11].setVisible(false);
+		gm.ui.bgPanel[12].setVisible(false);
 		gm.ui.messageText.setText("The Bar.");
 	}
 	public void showScreen10() {
@@ -133,6 +139,7 @@ public class SceneChanger {
 		gm.ui.bgPanel[9].setVisible(false);
 		gm.ui.bgPanel[10].setVisible(true);
 		gm.ui.bgPanel[11].setVisible(false);
+		gm.ui.bgPanel[12].setVisible(false);
 		
 		gm.stopMusic(gm.currentMusic);
 		gm.currentMusic = gm.bossMusic;
@@ -163,6 +170,7 @@ public class SceneChanger {
 		gm.ui.bgPanel[9].setVisible(false);
 		gm.ui.bgPanel[10].setVisible(false);
 		gm.ui.bgPanel[11].setVisible(false);
+		gm.ui.bgPanel[12].setVisible(false);
 		
 		gm.ui.restartButton.setVisible(true);
 		gm.ui.restartButton.setText("Click here to Restart");
@@ -183,6 +191,7 @@ public class SceneChanger {
 		gm.ui.bgPanel[9].setVisible(false);
 		gm.ui.bgPanel[10].setVisible(false);
 		gm.ui.bgPanel[11].setVisible(false);
+		gm.ui.bgPanel[12].setVisible(false);
 		
 		gm.ui.restartButton.setVisible(true);
 		gm.ui.restartButton.setText("Click here to Restart");
@@ -204,6 +213,7 @@ public class SceneChanger {
 		gm.ui.bgPanel[9].setVisible(false);
 		gm.ui.bgPanel[10].setVisible(false);
 		gm.ui.bgPanel[11].setVisible(false);
+		gm.ui.bgPanel[12].setVisible(false);
 		
 		gm.ui.restartButton.setVisible(true);
 		gm.ui.restartButton.setText("Click here to Restart");
@@ -224,6 +234,29 @@ public class SceneChanger {
 		gm.ui.bgPanel[9].setVisible(false);
 		gm.ui.bgPanel[10].setVisible(false);
 		gm.ui.bgPanel[11].setVisible(true);
+		gm.ui.bgPanel[12].setVisible(false);
+		
+		gm.ui.restartButton.setVisible(true);
+		gm.ui.restartButton.setText("Click here to Restart");
+		
+		gm.stopMusic(gm.currentMusic);
+		gm.currentMusic = gm.trueEndSound;
+		gm.playMusic(gm.currentMusic);
+	}
+	public void showLiarEnd(int currentBgNum) {
+		
+		gm.ui.bgPanel[1].setVisible(false);
+		gm.ui.bgPanel[2].setVisible(false);
+		gm.ui.bgPanel[3].setVisible(false);
+		gm.ui.bgPanel[4].setVisible(false);
+		gm.ui.bgPanel[5].setVisible(false);
+		gm.ui.bgPanel[6].setVisible(false);
+		gm.ui.bgPanel[7].setVisible(false);
+		gm.ui.bgPanel[8].setVisible(false);
+		gm.ui.bgPanel[9].setVisible(false);
+		gm.ui.bgPanel[10].setVisible(false);
+		gm.ui.bgPanel[11].setVisible(false);
+		gm.ui.bgPanel[12].setVisible(true);
 		
 		gm.ui.restartButton.setVisible(true);
 		gm.ui.restartButton.setText("Click here to Restart");

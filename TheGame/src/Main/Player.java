@@ -11,6 +11,9 @@ public class Player {
 	public int bartCounter;
 	public int bartCounterBuy;
 	public int littleGirlCount;
+	public int liarCounter;
+	public int liarCounter2;
+	public int steveCounter;
 	
 	public int playerMaxLife;
 	public int playerLife;
@@ -46,6 +49,9 @@ public class Player {
 		bartCounter = 0;
 		bartCounterBuy = 0;
 		littleGirlCount = 0;
+		liarCounter = 0;
+		liarCounter2 = 0;
+		steveCounter = 0;
 		
 		
 		updatePlayerStatus();

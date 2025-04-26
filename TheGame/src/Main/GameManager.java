@@ -41,6 +41,7 @@ public class GameManager {
 	public URL itemFound = getClass().getClassLoader().getResource("audio//itemFound.wav");
 	public URL fieldMusic = getClass().getClassLoader().getResource("audio//medAbbey.wav");
 	public URL guardLeave = getClass().getClassLoader().getResource("audio//LeaveMePunch.wav");
+	public URL liarMusic = getClass().getClassLoader().getResource("audio//liarMusic.wav");
 	public URL chestSound = getClass().getClassLoader().getResource("audio//MinecraftChest.wav");
 	public URL money = getClass().getClassLoader().getResource("audio//money.wav");
 	public URL guardLook = getClass().getClassLoader().getResource("audio//needSomething.wav");
@@ -67,6 +68,7 @@ public class GameManager {
 	public static void main(String[] args) {
 		
 		new GameManager();
+		
 
 	}
 	public GameManager() {
