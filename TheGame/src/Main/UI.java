@@ -62,7 +62,7 @@ public class UI {
 		window.getContentPane().setBackground(Color.black);
 		window.setLayout(null);
 		
-		messageText = new JTextArea("What the hell!?");
+		messageText = new JTextArea("");
 		messageText.setBounds(50,405,700,150);
 		messageText.setBackground(Color.black);
 		messageText.setForeground(Color.white);
@@ -244,7 +244,7 @@ public class UI {
 	public void generateScene() {
 		
 		//Scene 1
-		createBackground(1, "PanelOne700.jpg");
+		createBackground(1, "PanelTwo700.jpg");
 		createObject(1, 450,50,200,200, "woodenshedP.png", "Look", "Enter", "Rest", "lookHut", "enterHut", "restHut");
 		createObject(1, 90,55,120,300, "knight120x300.png", "Look", "Talk", "Attack", "lookKnight", "talkKnight", "attackKnight");
 		createObject(1, 300,270,76,60, "chest76x60.png", "Look", "Talk", "Open", "lookChest", "talkChest", "openChest");

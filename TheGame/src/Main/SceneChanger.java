@@ -24,13 +24,10 @@ public class SceneChanger {
 		gm.ui.bgPanel[12].setVisible(false);
 		gm.ui.messageText.setText("Let's go to Adventure!!");
 		
-		if(gm.currentMusic == gm.fieldMusic) {
-			
-		}
-		else {
-			gm.stopMusic(gm.currentMusic);
-			gm.currentMusic=gm.fieldMusic;
-			gm.playMusic(gm.currentMusic);
+		if (gm.currentMusic != gm.fieldMusic) {
+		    gm.stopMusic(gm.currentMusic);
+		    gm.currentMusic = gm.fieldMusic;
+		    gm.playMusic(gm.currentMusic);
 		}
 	}
 	public void showScreen2() {
