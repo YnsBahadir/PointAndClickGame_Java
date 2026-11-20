@@ -9,7 +9,7 @@ Köyü korkunç bir canavardan kurtarmaya çalışan bir kahramanı yönetiyorsu
 
 ## 📸 Ekran Görüntüleri
 
-| Ölüm Ekranı | Sahne 1 – Köy | Sahne 2 – Mağara Girişi |
+| Ölüm Ekranı | Sahne 1 – Taverna | Sahne 2 – Mağara Girişi |
 |:---:|:---:|:---:|
 | ![Ölüm Ekranı](https://github.com/YnsBahadir/PointAndClickGame_Java/blob/main/TheGame/ScreenShot/DeathPanel.png) | ![Taverna](https://github.com/YnsBahadir/PointAndClickGame_Java/blob/main/TheGame/ScreenShot/TavernaSS.png) | ![Mağara](https://github.com/YnsBahadir/PointAndClickGame_Java/blob/main/TheGame/ScreenShot/SearchPanel.png) |
 
