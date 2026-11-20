@@ -11,7 +11,7 @@ Köyü korkunç bir canavardan kurtarmaya çalışan bir kahramanı yönetiyorsu
 
 | Ölüm Ekranı | Sahne 1 – Köy | Sahne 2 – Mağara Girişi |
 |:---:|:---:|:---:|
-| ![Ölüm Ekranı](ScreenShot/DeathPanel.png) | ![Taverna](ScreenShot/TavernaSS.png) | ![Mağara](ScreenShot/SearchPanel.png) |
+| ![Ölüm Ekranı](res/ScreenShot/DeathPanel.png) | ![Taverna](ScreenShot/TavernaSS.png) | ![Mağara](ScreenShot/SearchPanel.png) |
 
 ---
 
